@@ -4,14 +4,275 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Pink</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <style>
+  /*Позже уберу это из гугла*/
+		body {
+			font-family: 'Open Sans', sans-serif;
+		} 
+		#google-map {
+	      height:400px;
+	      width:100%;
+	  }
+	  .gm-style-iw * {
+	      display: block;
+	      width: 100%;
+	  }
+	  .gm-style-iw h4, .gm-style-iw p {
+	      margin: 0;
+	      padding: 0;
+	  }
+	  .gm-style-iw a {
+	      color: #4272db;
+	  }
+  </style>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body>
+	<header class="top">
+		<div class="container">
+			<h1>
+				<a href="/" class="logo">
+					<span class="hidden">Pink</span>
+				</a>
+			</h1>
+			<button class="toggle-menu">
+				<span class="hidden">Переключение меню</span>
+				<span class="icon-close hidden">x</span>
+				<span class="icon-toggle"></span>
+			</button>
+			<nav class="top__nav">
+				<ul class="top__menu">
+					<li><a href="">Информация</a></li>
+					<li><a href="">Возможности</a></li>
+					<li><a href="">Отзывы</a></li>
+					<li><a href="">Стоимость</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
+	<main>
+		<div class="container">
+			
+			<div class="intro">
 
+				<div class="intro-banner">
+					<p>Взгляните на жизнь иначе!</p>
+				</div>
+
+				<div class="download">
+					<a href="#0" class="btn-download">Скачать приложение</a>
+
+					<p>Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
+				</div>
+
+			</div>
+				
+
+			<div class="features">
+
+				<div class="features__banner">
+					<p>Устали от серости мегаполиса?  </p>
+					<p>Нам есть, что вам  предложить!</p>
+				</div>
+
+				<div class="features__list">
+
+					<section class="feature">
+						<h2>Поднимает настроение</h2>
+						<p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+					</section>
+
+					<section class="feature">
+						<h2>Меняет мир вокруг </h2>
+						<p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+					</section>
+
+					<section class="feature">
+						<h2>Заводит новых друзей</h2>
+						<p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+					</section>
+
+				</div>
+				<img src="" alt="iphone">
+
+			</div>
+
+
+			<div class="reviews">
+				<div class="slider reviews-slider">
+
+					<div class="slider__list">
+
+						<div class="slider__item">
+							<div class="h2">Николай Петров</div>
+							<p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+						</div>
+
+						<div class="slider__item">
+							<div class="h2">Василий Иванов</div>
+							<p>«Невыносимая легкость бытия!»</p>
+						</div>
+
+						<div class="slider__item">
+							<div class="h2">Алексей Сидоров</div>
+							<p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+						</div>
+
+					</div>
+
+					<div class="slider__controls">
+						<a href="#0">1</a>
+						<a href="#0">2</a>
+						<a href="#0">3</a>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="tariffs">
+				<div class="slider tariffs-slider">
+
+					<div class="slider__list">
+
+						<div class="slider__item">
+							<div class="tariffs-slider__header">
+								<div class="h2">Базовый</div>
+								<div class="tariffs-slider__price">0,99 USD</div>
+							</div>
+							<div class="tariffs-slider__list">
+								<div class="tariffs-slider__item enabled">
+									Розовый фильтр <span class="hidden"> - yes</span>
+								</div>
+								<div class="tariffs-slider__item disabled">
+									Смайлики <span class="hidden"> - no</span>
+								</div>
+								<div class="tariffs-slider__item disabled">
+									Комментарии <span class="hidden"> - no</span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="slider__item tariffs__hit">
+							<div class="tariffs-slider__header">
+								<div class="h2">Стандарт</div>
+								<div class="tariffs-slider__price">3,99 USD</div>
+							</div>
+							<div class="tariffs-slider__list">
+								<div class="tariffs-slider__item enabled">
+									Розовый фильтр <span class="hidden"> - yes</span>
+								</div>
+								<div class="tariffs-slider__item enabled">
+									Смайлики  <span class="hidden"> - yes</span>
+								</div>
+								<div class="tariffs-slider__item disabled">
+									Комментарии <span class="hidden"> - no</span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="slider__item">
+							<div class="tariffs-slider__header">
+								<div class="h2">Золотой</div>
+								<div class="tariffs-slider__price">10,99 USD</div>
+							</div>
+							<div class="tariffs-slider__list">
+								<div class="tariffs-slider__item enabled">
+									Розовый фильтр <span class="hidden"> - yes</span>
+								</div>
+								<div class="tariffs-slider__item enabled">
+									Смайлики <span class="hidden"> - yes</span>
+								</div>
+								<div class="tariffs-slider__item enabled">
+									Комментарии <span class="hidden"> - yes</span>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="slider__controls">
+						<a href="#0">1</a>
+						<a href="#0">2</a>
+						<a href="#0">3</a>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="contacts">
+				<div class="contacts__banner">Остались вопросы? <br> Свяжитесь с нами!</div>
+
+				<div class="contacts__list">
+					<div class="contacts__item">
+						<div class="contacts__name">Звоните:</div>
+						<div class="contacts__info">8 (800) 1000 900</div>
+					</div>
+					<div class="contacts__item">
+						<div class="contacts__name">Пишите:</div>
+						<div class="contacts__info">hello@pinkapp.ru</div>
+					</div>
+					<div class="contacts__item">
+						<div class="contacts__name">Приезжайте в гости:</div>
+						<div class="contacts__info">Санкт-Петербург, <br> Невский проспект, д. 20</div>
+					</div>
+				</div>
+
+				<div class="map" id="google-map"></div>
+
+			</div>
+			
+		</div>
+
+	</main>
+  
   <!-- <script src="js/script.js"></script> -->
+	<script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(59.93643,30.321306),
+            zoom: 16,
+            zoomControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            scrollwheel: false,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+        }
+        var mapElement = document.getElementById('google-map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['Мы здесь!', 'undefined', 'undefined', 'undefined', 'undefined', 59.936352, 30.32109700000001, 'https://mapbuildr.com/assets/img/markers/ellipse-red.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
 
+}
+</script>
 </body>
 </html>
