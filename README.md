@@ -2,6 +2,7 @@
 
 * Студент: [Leto](https://htmlacademy.ru/profile/id17099).
 * Наставник: [Andrey Alexeev](https://htmlacademy.ru/profile/id4596).
+* Сайт: [Pink](http://irena-jane.github.io/17099-Pink/).
 
 --
 
