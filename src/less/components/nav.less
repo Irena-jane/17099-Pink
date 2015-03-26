@@ -1,0 +1,38 @@
+.main-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 20px;
+
+  &__toggle {
+    background: none;
+    border: none;
+  }
+
+  &__list {
+
+  }
+}
+
+.icon-close {}
+
+.icon-toggle{
+  margin-top: 20px;
+  display: inline-block;
+  width: 50px;
+  // box-shadow: 0 0px 0 3px #fff, 0 -15px 0 3px #fff, 0 -35px 0 3px #fff;
+  &,
+  &:before,
+  &:after {
+
+    width: 50px;
+    height: 5px;
+    background: #fff;
+    margin-bottom: 5px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+  }
+}

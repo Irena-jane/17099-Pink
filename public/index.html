@@ -5,20 +5,19 @@
   <meta charset="utf-8">
   <title>HTML Academy: Pink</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/google-style.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="page-wrapper page-wrapper2">
+  <div class="page-wrapper">
 
     <header class="page-top">
       <div class="container">
 
         <div class="logo">
-          <a href="/">
-            <span class="hidden">Pink</span>
-          </a>
+          <a href="/">Pink</a>
         </div>
 
         <nav class="main-nav">
@@ -28,7 +27,7 @@
             <span class="icon-toggle"></span>
           </button>
 
-          <ul class="main-nav__list">
+          <ul class="main-nav__list hidden">
             <li><a href="#intro">Информация</a></li>
             <li><a href="#features">Возможности</a></li>
             <li><a href="#reviews">Отзывы</a></li>
@@ -63,7 +62,7 @@
         <div id="features" class="features">
 
           <h1 class="features__title">
-            <span>Устали от серости мегаполиса?</span> <br>
+            <span>Устали от серости мегаполиса?</span>
             <span>Нам есть, что вам  предложить!</span>
           </h1>
 
@@ -94,42 +93,51 @@
 
 
         <div id="reviews" class="slider reviews">
+          <div class="slider__inner slider__inner--w280">
 
-          <div class="slider__list">
+            <div class="slider__list">
 
-            <div class="slider__item">
+              <div class="slider__item">
 
-              <blockquote class="review">
-                <cite class="h2">Николай Петров</cite>
-                <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-              </blockquote>
+                <blockquote class="review">
+                  <cite class="h2">Николай Петров</cite>
+                  <q>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                  </q>
+                </blockquote>
 
-            </div>
+              </div>
 
-            <div class="slider__item">
+              <div class="slider__item">
 
-              <blockquote class="review">
-                <cite class="h2">Василий Иванов</cite>
-                <p>«Невыносимая легкость бытия!»</p>
-              </blockquote>
+                <blockquote class="review">
+                  <cite class="h2">Василий Иванов</cite>
+                  <q>Невыносимая легкость бытия!
+                  </q>
+                </blockquote>
 
-            </div>
+              </div>
 
-            <div class="slider__item">
+              <div class="slider__item">
 
-              <blockquote class="review">
-                <cite class="h2">Алексей Сидоров</cite>
-                <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-              </blockquote>
+                <blockquote class="review">
+                  <cite class="h2">Алексей Сидоров</cite>
+                  <q>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                  </q>
+                </blockquote>
+
+              </div>
 
             </div>
 
           </div>
 
+
           <div class="slider__controls">
-            <a href="#0">1</a>
-            <a href="#0">2</a>
-            <a href="#0">3</a>
+            <div class="slider__ctrl-inner">
+              <a class="active" href="#0">1</a>
+              <a href="#0">2</a>
+              <a href="#0">3</a>
+            </div>
           </div>
 
         </div>
@@ -137,89 +145,120 @@
 
 
         <div id="tariffs" class="slider tariffs">
+          <div class="slider__inner">
 
-          <div class="slider__list">
+            <div class="slider__list">
 
-            <div class="slider__item">
+              <div class="slider__item">
 
-              <div class="tariff">
-                <div class="tariff__header">
-                  <div class="h2">Базовый</div>
-                  <div class="tariff__price">0,99 USD</div>
+                <div class="tariff">
+                  <div class="tariff__header">
+                    <div class="tariff__container">
+                      <div class="h2">Базовый</div>
+                      <div class="tariff__price">0,99 USD</div>
+                    </div>
+                  </div>
+
+                  <div class="tariff__list">
+                    <div class="tariff__item enabled">
+                      <div class="tariff__container">
+                        Розовый фильтр <span class="icon-yes"> - yes</span>
+                      </div>
+                    </div>
+                    <div class="tariff__item enabled">
+                      <div class="tariff__container">
+                        Смайлики  <span class="icon-no"> - no</span>
+                      </div>
+                    </div>
+                    <div class="tariff__item disabled">
+                      <div class="tariff__container">
+                        Комментарии <span class="icon-no"> - no</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="tariff__list">
-                  <div class="tariff__item enabled">
-                    Розовый фильтр <span class="hidden"> - yes</span>
+              </div>
+
+              <div class="slider__item">
+
+                <div class="tariff tariff--hit">
+                  <div class="tariff__header">
+                    <div class="tariff__container">
+                      <div class="h2">Стандарт</div>
+                      <div class="tariff__price">3,99 USD</div>
+                    </div>
                   </div>
-                  <div class="tariff__item disabled">
-                    Смайлики <span class="hidden"> - no</span>
+
+                  <div class="tariff__list">
+                    <div class="tariff__item enabled">
+                      <div class="tariff__container">
+                        Розовый фильтр <span class="icon-yes"> - yes</span>
+                      </div>
+                    </div>
+                    <div class="tariff__item enabled">
+                      <div class="tariff__container">
+                        Смайлики  <span class="icon-yes"> - yes</span>
+                      </div>
+                    </div>
+                    <div class="tariff__item disabled">
+                      <div class="tariff__container">
+                        Комментарии <span class="icon-no"> - no</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="tariff__item disabled">
-                    Комментарии <span class="hidden"> - no</span>
+
+                </div>
+
+              </div>
+
+              <div class="slider__item">
+
+                <div class="tariff">
+                  <div class="tariff__header">
+                    <div class="tariff__container">
+                      <div class="h2">Золотой</div>
+                      <div class="tariff__price">10,99 USD</div>
+                    </div>
+                  </div>
+
+                  <div class="tariff__list">
+                    <div class="tariff__item enabled">
+                      <div class="tariff__container">
+                        Розовый фильтр <span class="icon-yes"> - yes</span>
+                      </div>
+                    </div>
+                    <div class="tariff__item enabled">
+                      <div class="tariff__container">
+                        Смайлики  <span class="icon-yes"> - yes</span>
+                      </div>
+                    </div>
+                    <div class="tariff__item disabled">
+                      <div class="tariff__container">
+                        Комментарии <span class="icon-yes"> - yes</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
               </div>
 
             </div>
-
-            <div class="slider__item">
-
-              <div class="tariff tariff--hit">
-                <div class="tariff__header">
-                  <div class="h2">Стандарт</div>
-                  <div class="tariff__price">3,99 USD</div>
-                </div>
-                <div class="tariff__list">
-                  <div class="tariff__item enabled">
-                    Розовый фильтр <span class="hidden"> - yes</span>
-                  </div>
-                  <div class="tariff__item enabled">
-                    Смайлики  <span class="hidden"> - yes</span>
-                  </div>
-                  <div class="tariff__item disabled">
-                    Комментарии <span class="hidden"> - no</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="slider__item">
-
-              <div class="tariff">
-                <div class="tariff__header">
-                  <div class="h2">Золотой</div>
-                  <div class="tariff__price">10,99 USD</div>
-                </div>
-                <div class="tariff__list">
-                  <div class="tariff__item enabled">
-                    Розовый фильтр <span class="hidden"> - yes</span>
-                  </div>
-                  <div class="tariff__item enabled">
-                    Смайлики <span class="hidden"> - yes</span>
-                  </div>
-                  <div class="tariff__item enabled">
-                    Комментарии <span class="hidden"> - yes</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
           </div>
 
           <div class="slider__controls">
-            <a href="#0">1</a>
-            <a href="#0">2</a>
-            <a href="#0">3</a>
+            <div class="slider__ctrl-inner slider__ctrl-inner--h100">
+              <a href="#0">1</a>
+              <a class="active" href="#0">2</a>
+              <a href="#0">3</a>
+            </div>
           </div>
 
         </div>
 
 
         <div class="contacts">
-          <div class="contacts__banner">Остались вопросы? <br> Свяжитесь с нами!</div>
+          <div class="contacts__banner">Остались вопросы? Свяжитесь с нами!</div>
 
           <dl class="contacts__list">
             <dt>Звоните:</dt>

@@ -1,0 +1,25 @@
+.a-btn {
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+.btn {
+  &:extend(.a-btn all);
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+
+}
+
+.btn-download {
+  &:extend(.btn all);
+  width: 280px;
+  display: inline-block;
+  color: #fff;
+  border: 3px solid;
+  border-radius: 20px;
+  padding: 13px;
+  font-weight: 600;
+}
