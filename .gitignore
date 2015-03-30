@@ -1,5 +1,6 @@
 node_modules
 npm-debug.log
+public
 Thumbs.db
 .DS_Store
 prepros.cfg
