@@ -21,12 +21,12 @@
 
         <nav class="main-nav">
 
-          <button class="main-nav__toggle">
+          <button class="main-nav__toggle js-menu-toggle">
             переключить меню
             <span class="main-nav__icon-toggle"></span>
           </button>
 
-          <ul class="main-nav__list hidden">
+          <ul class="main-nav__list js-menu">
             <li><a href="#intro">Информация</a></li>
             <li><a href="#features">Возможности</a></li>
             <li><a href="#reviews">Отзывы</a></li>
@@ -38,22 +38,27 @@
     </header>
 
     <main class="index-content">
-      <div class="container">
+
 
         <div id="intro" class="intro">
 
           <div class="intro__banner">
-            <p>Взгляните на жизнь иначе!</p>
-          </div>
-
-          <div class="intro__download">
-
-            <a href="#0" class="btn-download">Скачать приложение</a>
-            <div class="img-wrapper">
-              <img src="img/OS.png" alt="iPhone, iPad, Android" width="auto" height="auto">
+            <div class="container">
+              <p class="intro__slogan">Взгляните на жизнь иначе!</p>
             </div>
-            <p class="intro__info">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
+
+            <div class="intro__download">
+
+              <a href="#0" class="btn-download">Скачать приложение</a>
+              <div class="intro__img-wrapper">
+                <img src="img/OS.png" alt="iPhone, iPad, Android" width="auto" height="auto">
+              </div>
+              <p class="intro__info">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
+            </div>
+
           </div>
+
+
 
         </div>
 
@@ -65,31 +70,51 @@
             <span>Нам есть, что вам  предложить!</span>
           </h1>
 
-          <ul class="features__list">
+          <div class="container">
 
-            <li class="features__item">
-              <strong>Поднимает настроение</strong>
-              <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-            </li>
+            <ul class="features__list">
+              <li class="features__item">
+                <strong>Поднимает настроение</strong>
+                <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+              </li>
 
-            <li class="features__item">
-              <strong>Меняет мир вокруг </strong>
-              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
+              <li class="features__item">
+                <strong>Меняет мир вокруг </strong>
+                <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
 
-            <li class="features__item">
-              <strong>Заводит новых друзей</strong>
-              <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
+              <li class="features__item">
+                <strong>Заводит новых друзей</strong>
+                <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
 
-          </ul>
-          <div class="img-wrapper">
-            <img src="img/iphone.png" alt="iphone" width="auto" height="auto">
+            <div class="features__img-wrapper">
+              <picture>
+                 <source srcset="img/iphone_2_3@1x.png" media="(min-width: 1200px)">
+                 <source srcset="img/iphone_2_3@1x.png" media="(min-width: 700px)">
+                 <img src="img/iphone.png" alt="iphone" width="auto" height="auto">
+              </picture>
+            </div>
           </div>
 
         </div>
 
-
+        <div class="british-joy">
+          <div class="container">
+            <div class="british-joy__img-wrapper">
+              <picture>
+                <source srcset="img/" media="(min-width: 1200px)">
+                <img src="img/" alt="clock" width="auto" height="auto">
+              </picture>
+            </div>
+            <div class="british-joy__content">
+              <div class="british-joy__title">Эффект  на 24 часа!</div>
+              <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <div class="british-joy__link">Узнать больше об исследовании</div>
+            </div>
+          </div>
+        </div>
 
         <div id="reviews" class="slider reviews">
           <div class="slider__inner slider__inner--w280">
@@ -272,7 +297,7 @@
 
         </div>
 
-      </div>
+
 
     </main>
 
@@ -281,6 +306,7 @@
 
   <!-- <script src="js/script.js"></script> -->
 	<script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
-	<script src="js/google-map.js"></script>
+  <script src="js/google-map.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>

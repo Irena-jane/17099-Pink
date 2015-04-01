@@ -1,0 +1,30 @@
+.british-joy {
+  display: none;
+
+  .container {
+    .clearfix();
+  }
+  &__img-wrapper {
+    float: left;
+    margin-right: 40px;
+  }
+  &__content {
+    float: right;
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+  }
+
+  &__link {
+    color: @red;
+    text-decoration: underline;
+  }
+  @media (min-width:700px) {
+    display: block;
+  }
+  @media (min-width:1200px) {
+    background-color: @gray-light;
+  }
+}

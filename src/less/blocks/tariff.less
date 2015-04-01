@@ -1,0 +1,90 @@
+.tariff__container {
+    border: 2px solid @gray-border;
+    border-width: 0 2px;
+    width: 280px;
+    margin: 0 auto;
+    padding: 19px 0;
+  }
+.tariff {
+
+  &__header {
+    background-color: @blue-dark;
+    padding: 0px 20px;
+    color: #fff;
+    text-align:center;
+
+  }
+  .h2 {
+    text-transform: uppercase;
+  }
+  &__price {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &__list {
+
+  }
+  &__item {
+    border-color: @gray-border;
+    border-style: solid;
+    border-width: 0 0px 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: @blue-text;
+
+    .tariff__container {
+      padding: 15px;
+    }
+
+  }
+  .enabled {
+
+  }
+  span[class^="icon-"] {
+    font-size: 0;
+  }
+  .icon-yes {
+    &:before{
+      content: '';
+      display: inline-block;
+      vertical-align: top;
+      width: 20px;
+      height: 10px;
+      border-style: solid;
+      border-width: 0px 0px 1px 1px;
+      border-color: @green;
+      transform: rotate(-45deg);
+    }
+    // background-image: url('@{i}');
+  }
+  .icon-no {
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 20px;
+      height: 1px;background-color: @red-light;
+    }
+    &:before{
+      transform: rotate(45deg);
+    }
+    &:after {
+
+      transform: rotate(-45deg);
+    }
+
+    // background-image: url('@{i}');
+  }
+  .hidden {
+
+  }
+  .disabled {
+
+  }
+}

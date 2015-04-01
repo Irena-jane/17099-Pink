@@ -1,0 +1,90 @@
+.intro {
+  background-color: @blue-dark;
+
+
+
+  &__banner {
+    padding: 84px 0 0px;
+    font-size: 24px;
+    color: #fff;
+    background-image:  url('@{i}iphone-hand-1.png'), url('@{i}bg_intro_1@1x.jpg') ;
+    background-size: 258px, auto;
+    background-position: center 173px, center top;
+    background-repeat: no-repeat;
+
+
+    @media (min-width:700px) {
+      background-image:  url('@{i}iphone-hand-2@1x.png'), url('@{i}bg_intro_2@1x.jpg') ;
+      background-size: auto, auto 696px;
+      background-position: center 152px, center top;
+    }
+    @media (min-width:1200px) {
+      background: @blue-dark url('@{i}bg_intro_2@2x.jpg') center top no-repeat;
+    }
+  }
+  &__slogan {
+    width: 236px;
+    margin: 0 auto;
+    padding-bottom: 326px;
+    text-align: center;
+    font-weight: 300;
+
+    @media (min-width:700px) {
+      width: 260px;
+      padding: 110px 0 0 45px;
+      margin: 0;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 48px;
+    }
+    @media (min-width:1200px) {
+
+    }
+  }
+
+  &__download {
+    .container;
+    padding-top: 28px;
+    text-align: center;
+    background-color: @blue-dark;
+
+    @media (min-width:700px) {
+        background-color: transparent;
+        text-align: left;
+    }
+
+     p {
+        @media (min-width:700px) {
+            margin: 0;
+            font-size: 18px;
+            width: 300px;
+        }
+     }
+  }
+
+  &__img-wrapper {
+    padding: 28px 0 0 0;
+
+    @media (min-width:700px) {
+            padding: 28px 0 ;
+            width: 280px;
+            text-align: center;
+        }
+
+  }
+  &__info {
+    margin: 0 auto;
+    width: 236px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 32px;
+
+    @media (min-width:700px) {
+        padding-bottom: 110px;
+    }
+  }
+
+
+}
