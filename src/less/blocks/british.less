@@ -1,5 +1,7 @@
 .british-joy {
   display: none;
+  padding-top: 58px;
+  padding-bottom: 10px;
 
   .container {
     .clearfix();
@@ -7,16 +9,36 @@
   &__img-wrapper {
     float: left;
     margin-right: 40px;
+    img {
+      @media (min-width:1200px) {
+        width: 300px;
+      }
+    }
+     @media (min-width:1200px) {
+        margin-right: 66px;
+      }
   }
   &__content {
     float: right;
+    width: 310px;
+    @media (min-width:1200px) {
+        float: none;
+        width: auto;
+        padding-top: 100px;
+
+      }
   }
   &__title {
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
   }
-
+  &__text,
+  &__link {
+    @media (min-width:1200px) {
+      font-size: 18px;
+    }
+  }
   &__link {
     color: @red;
     text-decoration: underline;
@@ -26,5 +48,6 @@
   }
   @media (min-width:1200px) {
     background-color: @gray-light;
+    padding-bottom: 68px;
   }
 }

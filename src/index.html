@@ -13,28 +13,29 @@
   <div class="page-wrapper">
 
     <header class="page-top">
-      <div class="container">
 
-        <div class="logo">
-          <a href="/">Pink</a>
-        </div>
+      <nav class="main-nav">
+        <div class="container">
 
-        <nav class="main-nav">
-
+          <div class="logo">
+            <a href="/">Pink</a>
+          </div>
           <button class="main-nav__toggle js-menu-toggle">
             переключить меню
             <span class="main-nav__icon-toggle"></span>
           </button>
+        </div>
 
-          <ul class="main-nav__list js-menu">
-            <li><a href="#intro">Информация</a></li>
-            <li><a href="#features">Возможности</a></li>
-            <li><a href="#reviews">Отзывы</a></li>
-            <li><a href="#tariffs">Стоимость</a></li>
-          </ul>
-        </nav>
 
-      </div>
+        <ul class="main-nav__list js-menu">
+          <li><a href="#intro">Информация</a></li>
+          <li><a href="#features">Возможности</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#tariffs">Стоимость</a></li>
+        </ul>
+      </nav>
+
+
     </header>
 
     <main class="index-content">
@@ -66,86 +67,110 @@
         <div id="features" class="features">
 
           <h1 class="features__title">
-            <span>Устали от серости мегаполиса?</span>
-            <span>Нам есть, что вам  предложить!</span>
+            <span class="features__title-elem features__title-elem--first">Устали от серости мегаполиса?</span>
+            <span class="features__title-elem">Нам есть, что вам <br class="mobile-hidden"> предложить!</span>
           </h1>
 
           <div class="container">
 
             <ul class="features__list">
               <li class="features__item">
-                <strong>Поднимает настроение</strong>
-                <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+                <strong class="features__caption">Поднимает настроение</strong>
+                <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
               </li>
 
               <li class="features__item">
-                <strong>Меняет мир вокруг </strong>
-                <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                <strong class="features__caption">Меняет мир вокруг </strong>
+                <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
               </li>
 
               <li class="features__item">
-                <strong>Заводит новых друзей</strong>
-                <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                <strong class="features__caption">Заводит новых друзей</strong>
+                <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
             </ul>
 
-            <div class="features__img-wrapper">
-              <picture>
-                 <source srcset="img/iphone_2_3@1x.png" media="(min-width: 1200px)">
-                 <source srcset="img/iphone_2_3@1x.png" media="(min-width: 700px)">
-                 <img src="img/iphone.png" alt="iphone" width="auto" height="auto">
-              </picture>
+            <div class="features__imgs">
+              <div class="features__img-wrapper laptop-hidden">
+                <picture class="features__picture">
+                   <source srcset="img/iphone-screen-1-1@1x.png" media="(min-width: 1200px)">
+                   <source srcset="img/iphone_2_3@1x.png" media="(min-width: 700px)">
+                   <img src="img/iphone-screen-1-1@1x" alt="iphone" width="auto" height="auto">
+                </picture>
+              </div>
+              <div class="features__img-wrapper laptop-hidden">
+                <picture class="features__picture">
+                   <source srcset="img/iphone-screen-1-2@1x.png" media="(min-width: 1200px)">
+                   <source srcset="img/iphone_2_3@1x.png" media="(min-width: 700px)">
+                   <img src="img/iphone.png" alt="iphone" width="auto" height="auto">
+                </picture>
+              </div>
+              <div class="features__img-wrapper features__img-wrapper--pa">
+                <picture class="features__picture">
+                   <source width="180" srcset="img/iphone-screen-1-3@1x.png" media="(min-width: 1200px)">
+                   <source srcset="img/iphone_2_3@1x.png" media="(min-width: 700px)">
+                   <img src="img/iphone.png" alt="iphone" width="auto" height="auto">
+                </picture>
+              </div>
             </div>
+
+
           </div>
 
         </div>
 
-        <div class="british-joy">
+        <div class="british-joy mobile-hidden">
           <div class="container">
             <div class="british-joy__img-wrapper">
               <picture>
-                <source srcset="img/" media="(min-width: 1200px)">
-                <img src="img/" alt="clock" width="auto" height="auto">
+                <source srcset="_svg/timer.svg" media="(min-width: 1200px)">
+                <img src="_svg/timer.svg" alt="clock" width="auto" height="auto">
               </picture>
             </div>
             <div class="british-joy__content">
               <div class="british-joy__title">Эффект  на 24 часа!</div>
-              <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <p class="british-joy__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
               <div class="british-joy__link">Узнать больше об исследовании</div>
             </div>
           </div>
         </div>
 
         <div id="reviews" class="slider reviews">
-          <div class="slider__inner slider__inner--w280">
+          <div class="slider__inner reviews__container">
 
             <div class="slider__list">
 
-              <div class="slider__item">
+              <div class="slider__item reviews__item">
 
                 <blockquote class="review">
-                  <cite class="h2">Николай Петров</cite>
-                  <q>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                  <cite class="review__title">Николай Петров
+                    <span class="review__info mobile-hidden">25 лет, водитель трамвая</span>
+                  </cite>
+                  <q class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
                   </q>
                 </blockquote>
 
               </div>
 
-              <div class="slider__item">
+              <div class="slider__item reviews__item">
 
                 <blockquote class="review">
-                  <cite class="h2">Василий Иванов</cite>
-                  <q>Невыносимая легкость бытия!
+                  <cite class="review__title">Василий Иванов
+                    <span class="review__info mobile-hidden">25 лет, водитель троллейбуса</span>
+                  </cite>
+                  <q class="review__text">Невыносимая легкость бытия!
                   </q>
                 </blockquote>
 
               </div>
 
-              <div class="slider__item">
+              <div class="slider__item reviews__item">
 
                 <blockquote class="review">
-                  <cite class="h2">Алексей Сидоров</cite>
-                  <q>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                  <cite class="review__title">Алексей Сидоров
+                    <span class="review__info mobile-hidden">25 лет, водитель иномарки</span>
+                  </cite>
+                  <q class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
                   </q>
                 </blockquote>
 
@@ -282,16 +307,24 @@
 
 
         <div class="contacts">
-          <div class="contacts__banner">Остались вопросы? Свяжитесь с нами!</div>
+          <div class="contacts__banner">Остались вопросы? <br class="mobile-hiden">Свяжитесь с нами!</div>
+          <div class="triangle-white">
+            <dl class="contacts__list contacts__list-1">
+              <dt class="contacts__caption">Звоните:</dt>
+              <dd class="contacts__text">8 (800) 1000 900</dd>
+            </dl>
 
-          <dl class="contacts__list">
-            <dt>Звоните:</dt>
-            <dd>8 (800) 1000 900</dd>
-            <dt>Пишите:</dt>
-            <dd>hello@pinkapp.ru</dd>
-            <dt>Приезжайте в гости:</dt>
-            <dd>Санкт-Петербург, <br> Невский проспект, д. 20</dd>
-          </dl>
+            <dl class="contacts__list contacts__list-2">
+              <dt class="contacts__caption">Пишите:</dt>
+              <dd class="contacts__text">hello@pinkapp.ru</dd>
+            </dl>
+
+            <dl class="contacts__list contacts__list-3">
+              <dt class="contacts__caption">Приезжайте в гости:</dt>
+              <dd class="contacts__text">Санкт-Петербург, <br> Невский проспект, д. 20</dd>
+            </dl>
+          </div>
+
 
           <div class="map" id="google-map"></div>
 
@@ -300,6 +333,18 @@
 
 
     </main>
+    <footer class="page-bottom">
+      <div class="page-bottom__logo"><a href="#0">pink</a></div>
+      <div class="page-bottom__socials">
+        <a href="http://twitter.com">twitter</a>
+        <a href="http://facebook.com">facebook</a>
+        <a href="http://youtube.com">youtube</a>
+      </div>
+      <div class="page-bottom__info">
+        Website by <a href="http://gluchanko.ru" class="icon-author">http://gluchanko.ru</a>
+        for <a href="http://htmlacademy.ru" class="icon-htmlacademy">http://htmlacademy.ru</a>
+      </div>
+    </footer>
 
   </div>
 

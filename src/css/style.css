@@ -245,6 +245,14 @@ th {
 	display: none !important;
 }
 
+.mobile-hidden {
+	display: none;
+}
+
+.laptop-hidden {
+	display: none;
+}
+
 .list-unstyled,
 .features__list {
 	margin: 0;
@@ -261,15 +269,12 @@ th {
 	background-image: linear-gradient(to bottom right, transparent 50%, #f2f2f2 50%);
 }
 
-.triangle-white,
-.contacts__list {
+.triangle-white {
 	position: relative;
 }
 
 .triangle-white:before,
-.triangle-white:after,
-.contacts__list:before,
-.contacts__list:after {
+.triangle-white:after {
 	content: " ";
 	position: absolute;
 	z-index: 100;
@@ -279,20 +284,28 @@ th {
 	background-repeat: no-repeat;
 }
 
-.triangle-white:before,
-.contacts__list:before {
+.triangle-white:before {
 	left: 0;
 	background-image: linear-gradient(to top right, transparent 50%, #ffffff 50%);
 }
 
-.triangle-white:after,
-.contacts__list:after {
+.triangle-white:after {
 	right: 0;
 	background-image: linear-gradient(to top left, transparent 50%, #ffffff 50%);
 }
 
-.h2,
-.contacts__list dt {
+.shadow:before {
+	content: '';
+	display: block;
+	width: 157px;
+	left: 70px;
+	height: 1px;
+	position: absolute;
+	bottom: -53px;
+	box-shadow: 0px 0px 58px 28px #000000;
+}
+
+.h2 {
 	display: block;
 	font-size: 18px;
 	line-height: 30px;
@@ -301,8 +314,7 @@ th {
 }
 
 .banner,
-.contacts__banner,
-.contacts__list dd {
+.contacts__banner {
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: 300;
@@ -319,7 +331,7 @@ th {
 	width: 100%;
 	right: 0;
 	top: 0;
-	padding-top: 20px;
+	background: rgba(0, 0, 0, 0.3);
 }
 
 .main-nav__toggle {
@@ -331,7 +343,7 @@ th {
 	height: 50px;
 	padding: 0;
 	position: absolute;
-	top: 10px;
+	top: 30px;
 	right: 20px;
 }
 
@@ -341,8 +353,10 @@ th {
 
 .main-nav__icon-toggle {
 	position: absolute;
-	top: 20px;
-	right: 0px;
+	top: 25px;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
 .main-nav__icon-toggle:before,
@@ -375,32 +389,28 @@ th {
 }
 
 .main-nav__list {
-	display: none;
 	margin: 0;
 	padding-left: 0;
 	list-style: none;
 	width: 100%;
-	padding-top: 46px;
-	float: left;
+	overflow: hidden;
+	max-height: 0px;
+	transition: max-height 0.4s;
 }
 
-.main-nav__list li {
-	font-size: 24px;
-	line-height: 30px;
-	font-weight: 300;
-	font-weight: 700;
-	text-align: center;
+.main-nav__list li,
+.main-nav__list a {
+	display: block;
 }
 
 .main-nav__list li > a {
-	display: block;
 	background-color: #283645;
 	padding: 16px;
 	color: #fff;
-	border-style: solid;
-	border-width: 1px 0 1px;
-	border-top-color: #48617c;
-	border-bottom-color: #000;
+	text-align: center;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 700;
 }
 
 .main-nav__list li > a,
@@ -409,21 +419,32 @@ th {
 	text-decoration: none;
 }
 
+.main-nav__list li:first-child {
+	box-shadow: 0px -1px 0px #000000;
+}
+
+.main-nav__list li {
+	border-style: solid;
+	border-color: transparent;
+	border-width: 1px 0 1px;
+	border-top-color: #48617c;
+	border-bottom-color: #000;
+}
+
 .menu-opened {
 	z-index: 10;
 }
 
 .menu-opened .logo {
-	background-color: #283645;
 	border-bottom-color: #000;
 }
 
-.menu-opened .main-nav__list {
-	display: block;
+.menu-opened .main-nav {
+	background-color: #283645;
 }
 
-.menu-opened .main-nav__toggle {
-	top: 10px;
+.menu-opened .main-nav__list {
+	max-height: 500px;
 }
 
 .menu-opened .main-nav__icon-toggle {
@@ -477,8 +498,8 @@ th {
 	display: inline-block;
 	color: #fff;
 	border: 3px solid;
-	border-radius: 20px;
-	padding: 13px;
+	border-radius: 26px;
+	padding: 12px 13px;
 	font-weight: 600;
 }
 
@@ -528,9 +549,11 @@ th {
 }
 
 .page-top {
-	position: absolute;
+	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
+	z-index: 1000;
 	background: rgba(29, 38, 49, 0.3);
 }
 
@@ -538,9 +561,6 @@ th {
 	font-size: 32px;
 	line-height: 44px;
 	text-transform: uppercase;
-	border-style: solid;
-	border-width: 1px 0 1px;
-	border-bottom-color: transparent;
 }
 
 .page-top .logo a {
@@ -584,19 +604,18 @@ th {
 	margin: 0;
 }
 
-.features__title span {
+.features__title-elem {
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: 300;
 	display: block;
 	text-align: center;
-	width: 340px;
 	margin: auto;
 	color: #1d2631;
 	margin-bottom: 32px;
 }
 
-.features__title span:first-of-type {
+.features__title-elem--first {
 	padding-top: 32px;
 }
 
@@ -626,14 +645,15 @@ th {
 	text-align: center;
 }
 
-.features__item strong {
+.features__caption {
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 700;
 }
 
-.features__item p {
+.features__text {
 	padding: 0 20px 34px;
-	margin: 0;
+	margin-bottom: 0;
+	color: #283645;
 }
 
 .features__img-wrapper {
@@ -644,6 +664,8 @@ th {
 
 .british-joy {
 	display: none;
+	padding-top: 58px;
+	padding-bottom: 10px;
 }
 
 .british-joy .container:before,
@@ -673,6 +695,7 @@ th {
 
 .british-joy__content {
 	float: right;
+	width: 310px;
 }
 
 .british-joy__title {
@@ -684,6 +707,52 @@ th {
 .british-joy__link {
 	color: #d22856;
 	text-decoration: underline;
+}
+
+.reviews {
+	padding-top: 30px;
+}
+
+.reviews__container {
+	width: 280px;
+}
+
+.reviews__item {
+	max-width: 320px;
+}
+
+.review {
+	text-align: center;
+	-webkit-margin-start: 0;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.review__title {
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	display: block;
+	font-size: 18px;
+	line-height: 30px;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.review__info {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.review__text {
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2;
+	color: #283645;
 }
 
 .tariff__container {
@@ -701,8 +770,7 @@ th {
 	text-align: center;
 }
 
-.tariff .h2,
-.tariff .contacts__list dt {
+.tariff .h2 {
 	text-transform: uppercase;
 }
 
@@ -772,6 +840,43 @@ th {
 	transform: rotate(-45deg);
 }
 
+.contacts {
+	text-align: center;
+	padding-top: 44px;
+}
+
+.contacts__banner {
+	color: #1d2631;
+}
+
+.contacts__list-3 {
+	padding-bottom: 20px;
+}
+
+.contacts__caption {
+	display: block;
+	font-size: 18px;
+	line-height: 30px;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.contacts__text {
+	font-size: 24px;
+	line-height: 30px;
+	color: #d22856;
+	margin-bottom: 20px;
+}
+
+.page-bottom {
+	display: none;
+}
+
+.page-bottom__socials a,
+.page-bottom__info a {
+	font: 0/0 a;
+}
+
 html * {
 	box-sizing: border-box;
 }
@@ -782,8 +887,9 @@ body {
 	line-height: 24px;
 }
 
-.slider {
-	width: 100%;
+img,
+picture {
+	vertical-align: top;
 }
 
 .slider__inner {
@@ -792,21 +898,15 @@ body {
 	overflow: hidden;
 }
 
-.slider__inner.slider__inner--w280 {
-	width: 280px;
-}
-
 .slider__list {
 	width: 1000px;
 }
 
 .slider__item {
+	margin: auto;
+	position: relative;
+	padding: 0 20px;
 	float: left;
-	max-width: 320px;
-}
-
-.slider__item blockquote {
-	-webkit-margin-start: 0;
 }
 
 .slider__controls {
@@ -846,53 +946,15 @@ body {
 	height: 100px;
 }
 
-.reviews {
-	padding-top: 30px;
-}
-
-.review {
-	text-align: center;
-}
-
-.review .h2,
-.review .contacts__list dt {
-	font-size: 18px;
-	line-height: 30px;
-	font-style: normal;
-	font-weight: 600;
-}
-
-.review p {
-	color: #283645;
-}
-
 .tariffs {
 	background-color: #f2f2f2;
 	padding-top: 66px;
 }
 
-.contacts {
-	text-align: center;
-	padding-top: 44px;
-}
-
-.contacts__banner {
-	color: #1d2631;
-}
-
-.contacts__list {
-	padding-bottom: 20px;
-}
-
-.contacts__list dd {
-	color: #d22856;
-	margin-bottom: 20px;
-}
-
 /*google style*/
 
 #google-map {
-	height: 400px;
+	height: 198px;
 	width: 100%;
 }
 
@@ -913,25 +975,18 @@ body {
 
 @media (min-width: 700px) {
 
+.mobile-hidden {
+	display: block;
+}
+
 .banner,
-.contacts__banner,
-.contacts__list dd {
+.contacts__banner {
 	font-size: 40px;
 	line-height: 48px;
 }
 
 .container {
 	width: 700px;
-}
-
-.main-nav__list li {
-	font-size: 40px;
-	line-height: 48px;
-}
-
-.main-nav__list li {
-	font-size: 40px;
-	line-height: 48px;
 }
 
 .intro__banner {
@@ -982,36 +1037,121 @@ body {
 	padding: 33px 0;
 }
 
-.features__title span {
+.features__title-elem {
 	font-size: 40px;
 	line-height: 48px;
 }
 
-.features__title span {
+.features__title-elem {
 	font-size: 40px;
 	line-height: 48px;
 }
 
-.features__title span:first-of-type {
+.features__title-elem--first {
 	margin-bottom: 0;
 	width: auto;
 }
 
 .features__list {
 	float: right;
+	width: 310px;
+	padding-top: 0;
 }
 
 .features__img-wrapper {
 	float: left;
+	height: auto;
+}
+
+.features__img-wrapper--pa {
+	position: absolute;
+	bottom: 0;
 }
 
 .british-joy {
 	display: block;
 }
 
+.reviews__container {
+	width: 100%;
+}
+
+.reviews__item {
+	max-width: 100%;
+}
+
+.review__title {
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2;
+	font-size: 20px;
+	padding-top: 40px;
+}
+
+.review__info {
+	color: #283645;
+}
+
+.review__text {
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.contacts {
+	font-size: 0;
+}
+
+.contacts__banner {
+	margin-bottom: 40px;
+}
+
+.contacts__list-1,
+.contacts__list-2 {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.contacts__text {
+	margin-bottom: 40px;
+}
+
+.page-bottom {
+	display: block;
+}
+
+.slider__item {
+	width: 700px;
+}
+
+.slider__item {
+	width: 700px;
+}
+
+#google-map {
+	height: 378px;
+}
+
 }
 
 @media (min-width: 1200px) {
+
+.mobile-hidden {
+	display: block;
+}
+
+.laptop-hidden {
+	display: block;
+}
+
+.banner,
+.contacts__banner {
+	font-size: 50px;
+	line-height: 60px;
+}
 
 .container {
 	width: 980px;
@@ -1019,7 +1159,13 @@ body {
 }
 
 .intro__banner {
-	background: #1d2631 url('../img/bg_intro_2@2x.jpg') center top no-repeat;
+	background-image: url('../img/iphone-hand-3@1x.png'), url('../img/bg_intro_full.jpg');
+	background-size: 960px, cover;
+	background-position: right 152px, center top;
+}
+
+.intro__slogan {
+	padding-bottom: 50px;
 }
 
 .intro__download {
@@ -1030,10 +1176,139 @@ body {
 .intro__download {
 	width: 980px;
 	padding: 0 10px;
+}
+
+.features__title-elem {
+	font-size: 50px;
+	line-height: 60px;
+}
+
+.features__title-elem {
+	font-size: 50px;
+	line-height: 60px;
+}
+
+.features .container {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.features__list {
+	float: none;
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2;
+	width: auto;
+}
+
+.features__item {
+	float: left;
+	width: 300px;
+	padding: 0 30px 30px;
+}
+
+.features__item:nth-child(2) {
+	margin: 0 20px;
+}
+
+.features__caption {
+	font-size: 30px;
+}
+
+.features__text {
+	font-size: 18px;
+	padding: 0;
+}
+
+.features__imgs {
+	position: relative;
+	top: -50px;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+}
+
+.features__img-wrapper {
+	background: url('../img/iphone-case-1@1x.png') center top no-repeat;
+	background-size: 190px;
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 302px;
+}
+
+.features__img-wrapper:before {
+	content: '';
+	display: block;
+	width: 157px;
+	left: 70px;
+	height: 1px;
+	position: absolute;
+	bottom: -53px;
+	box-shadow: 0px 0px 58px 28px #000000;
+}
+
+.features__img-wrapper:nth-child(2) {
+	margin: 0 20px;
+}
+
+.features__picture {
+	position: absolute;
+	bottom: -16px;
+	left: 70px;
+}
+
+.features__picture img {
+	width: 160px;
+}
+
+.british-joy__img-wrapper img {
+	width: 300px;
+}
+
+.british-joy__img-wrapper {
+	margin-right: 66px;
+}
+
+.british-joy__content {
+	float: none;
+	width: auto;
+	padding-top: 100px;
+}
+
+.british-joy__text,
+.british-joy__link {
+	font-size: 18px;
 }
 
 .british-joy {
 	background-color: #f2f2f2;
+	padding-bottom: 68px;
+}
+
+.contacts__list-1,
+.contacts__list-2,
+.contacts__list-3 {
+	width: 30%;
+	display: inline-block;
+}
+
+.slider__item {
+	width: 980px;
+	padding: 0 10px;
+}
+
+.slider__item {
+	width: 980px;
+	padding: 0 10px;
+}
+
+#google-map {
+	height: 512px;
 }
 
 }

@@ -8,20 +8,18 @@ body {
     font-size: @fz-base;
     line-height: @lh-base;
 }
-
+img, picture {
+  vertical-align: top;
+}
 
 
 .slider {
-  width: 100%;
 
   &__inner {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
 
-    &.slider__inner--w280 {
-      width: 280px;
-    }
   }
   &__list {
     &:extend(.clearfix all);
@@ -29,12 +27,12 @@ body {
 
   }
   &__item {
+    .container();
     float: left;
-    max-width: 320px;
+    // max-width: 320px;
+    // max-width: 100%;
   }
-  &__item blockquote {
-     -webkit-margin-start: 0;
-  }
+
   &__controls {
     display: table;
     width: 100%;
@@ -78,26 +76,6 @@ body {
   }
 }
 
-.reviews {
-  padding-top: 30px;
-  &:extend(.triangle-after all);
-
-
-}
-
-.review {
-  text-align: center;
-  .h2 {
-    font-size: 18px;
-    line-height: 30px;
-    font-style: normal;
-    font-weight: 600;
-  }
-  p {
-    color: @blue-text;
-    // min-height:200px;
-  }
-}
 
 
 .tariffs {
@@ -106,25 +84,4 @@ body {
 
 }
 
-.contacts {
 
-  text-align: center;
-  padding-top: 44px;
-
-  &__banner {
-    &:extend(.banner all);
-    color: @blue-dark;
-  }
-  &__list {
-    &:extend(.triangle-white all);
-    padding-bottom: 20px;
-      dt {
-        &:extend(.h2 all);
-      }
-      dd {
-        &:extend(.banner all);
-        color: @red;
-        margin-bottom: 20px;
-      }
-  }
-}

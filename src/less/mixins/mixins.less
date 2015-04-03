@@ -30,12 +30,13 @@
       display: block;
       height: 36px;
       background-image: linear-gradient(to bottom right, transparent 50%, @gray-light 50%);
-
+      // background-image: url('_svg/triangle-gray.svg');
     }
 
 }
 .triangle-white(){
   position: relative;
+
   &:before,
   &:after {
     content: " ";
@@ -56,3 +57,13 @@
     background-image: linear-gradient(to top left, transparent 50%, #fff 50%);
   }
 }
+.col3() {
+  float: left;
+  width: 300px;
+
+
+}
+.col3--center() {
+  margin: 0 20px;
+}
+

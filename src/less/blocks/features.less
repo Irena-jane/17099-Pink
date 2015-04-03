@@ -1,4 +1,5 @@
 .features {
+    // position: relative;
     .clearfix();
     background-color: @gray-light;
 
@@ -8,54 +9,125 @@
     text-align: center;
     margin: 0;
 
-    span {
-      .banner();
-      display: block;
-      text-align: center;
-      width: 340px;
-      margin: auto;
-      color: @blue-dark;
-      margin-bottom: 32px;
-    }
-    span:first-of-type {
-      padding-top: 32px;
-      @media (min-width:700px) {
-        margin-bottom: 0;
-        width: auto;
-      }
-    }
-
   }
+  &__title-elem {
+    .banner();
+    display: block;
+    text-align: center;
+    // width: 340px;
+    margin: auto;
+    color: @blue-dark;
+    margin-bottom: 32px;
+  }
+  &__title-elem--first {
+    padding-top: 32px;
+    @media (min-width:700px) {
+      margin-bottom: 0;
+      width: auto;
+    }
+  }
+
   .container {
     .clearfix();
+    @media (min-width:1200px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__list {
     &:extend(.list-unstyled );
+
     background-color: @gray-light;
     padding-top: 50px;
     text-align: center;
     @media (min-width:700px) {
       float: right;
+      width: 310px;
+      padding-top: 0;
+    }
+    @media (min-width:1200px) {
+      float: none;
+      order:2;
+      width: auto;
     }
 
   }
   &__item {
-    strong {
-      font-size: 18px;
-      font-weight: 600;
-    }
-    p {
-      padding: 0 20px 34px;
-      margin: 0;
+     @media (min-width:1200px) {
+      .col3();
+      padding: 0 30px 30px;
+      &:nth-child(2) {
+        .col3--center;
+      }
     }
   }
+  &__caption {
+    font-size: 18px;
+    font-weight: 700;
+    @media (min-width:1200px) {
+      font-size: 30px;
+    }
+  }
+  &__text {
+    padding: 0 20px 34px;
+    margin-bottom: 0;
+    color: @blue-text;
+    @media (min-width:1200px) {
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+
+  &__imgs {
+    @media (min-width:1200px) {
+      position: relative;
+      top:-50px;
+      order:1;
+    }
+  }
+
   &__img-wrapper {
     text-align: center;
     height: 278px;
     overflow: hidden;
+
     @media (min-width:700px) {
       float: left;
+      height: auto;
+    }
+    @media (min-width:1200px) {
+      background: url('@{i}iphone-case-1@1x.png') center top no-repeat;
+      background-size: 190px;
+      position: relative;
+      .shadow;
+      .col3();
+      height: 302px;
+      &:nth-child(2) {
+        .col3--center();
+      }
+
+    }
+    &--pa {
+      @media (min-width:700px) {
+        position: absolute;
+        bottom: 0;
+      }
+
     }
   }
+
+&__picture {
+  @media (min-width:1200px) {
+    position: absolute;
+    bottom: -16px;
+    left: 70px;
+    // width: 180px;
+
+    img{
+      width: 160px;
+    }
+  }
+}
+
 }

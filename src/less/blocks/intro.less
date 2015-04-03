@@ -19,8 +19,14 @@
       background-position: center 152px, center top;
     }
     @media (min-width:1200px) {
-      background: @blue-dark url('@{i}bg_intro_2@2x.jpg') center top no-repeat;
+
+      background-image: url('../img/iphone-hand-3@1x.png'), url('../img/bg_intro_full.jpg');
+        background-size: 960px, cover;
+        background-position: right 152px, center top;
+      // background: @blue-dark url('@{i}bg_intro_2@2x.jpg') center top no-repeat;
     }
+
+
   }
   &__slogan {
     width: 236px;
@@ -38,7 +44,7 @@
       line-height: 48px;
     }
     @media (min-width:1200px) {
-
+      padding-bottom: 50px;
     }
   }
 
