@@ -24,6 +24,7 @@
     "grunt-contrib-cssmin": "^0.12.2",
     "grunt-contrib-less": "^1.0.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-grunticon": "^2.1.6",
     "grunt-lintspaces": "^0.6.0",
     "grunt-notify": "^0.4.1",
     "grunt-replace": "^0.8.0",

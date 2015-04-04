@@ -2,7 +2,6 @@
 @import "var.less";
 
 @import "mixins/mixins.less";
-@import "global/helpers.less";
 @import "global/type.less";
 @import "global/layout.less";
 
@@ -18,11 +17,12 @@
 @import "blocks/page-bottom.less";
 
 @import "general.less";
+@import "global/helpers.less";
 @import "components/google-style.less";
 
-@media (min-width:700px) {
+@media (min-width:@screen-md-min) {
 
 }
-@media (min-width:1200px) {
+@media (min-width:@screen-lg-min) {
 
 }

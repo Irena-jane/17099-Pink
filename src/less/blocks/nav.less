@@ -5,7 +5,12 @@
   top: 0;
   // padding-top: 20px;
   background: rgba(0, 0, 0, .3);
+  &__container {
 
+    @media (min-width:@screen-md-min) {
+      .container();
+    }
+  }
   &__toggle {
       background: none;
       border: none;
@@ -15,11 +20,15 @@
       height: 50px;
       padding: 0;
       position: absolute;
-      top: 30px;
+      top: 5px;
       right: 20px;
 
       &:focus {
         outline: none;
+      }
+
+      @media (min-width:@screen-md-min) {
+        top:30px;
       }
   }
 
@@ -91,14 +100,14 @@
       border-top-color:  lighten(@blue-text, 17%);
       border-bottom-color: #000;
 
-      // @media (min-width:1200px) {
+      // @media (min-width:@screen-lg-min) {
       //   float: left;
       //   width: auto;
       // }
     }
   }
 
-  @media (min-width:1200px) {
+  @media (min-width:@screen-lg-min) {
     // display: none;
   }
 }

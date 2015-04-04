@@ -17,29 +17,38 @@
 .mobile-hidden {
   display: none;
 
-  @media (min-width:700px) {
+  @media (min-width:@screen-md-min) {
     display: block;
   }
-  @media (min-width:1200px) {
+  @media (min-width:@screen-lg-min) {
     display: block;
   }
 }
 .laptop-hidden {
   display: none;
 
-  @media (min-width:1200px) {
+  @media (min-width:@screen-lg-min) {
     display: block;
   }
 }
-// .desktop-hidden {
+.desktop-hidden {
 
-//   @media (min-width:700px) {
-
-//   }
-//   @media (min-width:1200px) {
-
-//   }
-// }
+  @media (min-width:@screen-lg-min) {
+    display: none;
+  }
+}
+.mobile-shown {
+  display: inherit;
+  @media (min-width:@screen-md-min) {
+    display: none;
+  }
+}
+.desktop-shown {
+  display: none;
+  @media (min-width:@screen-lg-min) {
+    display: block;
+  }
+}
 
 .list-unstyled {
   margin: 0;

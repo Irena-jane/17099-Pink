@@ -10,18 +10,19 @@
     float: left;
     margin-right: 40px;
     img {
-      @media (min-width:1200px) {
+      width: 263px;
+      @media (min-width:@screen-lg-min) {
         width: 300px;
       }
     }
-     @media (min-width:1200px) {
+     @media (min-width:@screen-lg-min) {
         margin-right: 66px;
       }
   }
   &__content {
     float: right;
     width: 310px;
-    @media (min-width:1200px) {
+    @media (min-width:@screen-lg-min) {
         float: none;
         width: auto;
         padding-top: 100px;
@@ -35,7 +36,7 @@
   }
   &__text,
   &__link {
-    @media (min-width:1200px) {
+    @media (min-width:@screen-lg-min) {
       font-size: 18px;
     }
   }
@@ -43,10 +44,10 @@
     color: @red;
     text-decoration: underline;
   }
-  @media (min-width:700px) {
+  @media (min-width:@screen-md-min) {
     display: block;
   }
-  @media (min-width:1200px) {
+  @media (min-width:@screen-lg-min) {
     background-color: @gray-light;
     padding-bottom: 68px;
   }

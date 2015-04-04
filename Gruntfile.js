@@ -56,6 +56,54 @@ module.exports = function(grunt) {
       },
 
 
+
+      // ===========
+      // SVG TASK
+      // ===========
+
+      svgmin: {
+        options: {
+          plugins: [
+            {
+              removeDesc: true
+            }
+          ]
+        },
+        dist: {
+          files: [{
+            expand: true,
+            cwd: '<%= config.src %>/_svg',
+            src: ['!!ai','*.svg'],
+            dest: '<%= config.src %>/_svg/svgmin'
+          }]
+        }
+      },
+
+
+      grunticon: {
+        mysvg: {
+          files: [{
+            expand: true,
+            cwd: '<%= config.src %>/_svg',
+            src: ['svgmin/*.svg', '*.png'],
+            dest: '<%= config.src %>'
+          }],
+          options: {
+            enhanceSVG: true,
+            datasvgcss   : 'css/grunticon-icons.data.svg.css',
+            datapngcss   : 'css/grunticon-icons.data.png.css',
+            urlpngcss    : 'css/grunticon-icons.fallback.css',
+            previewhtml  : '_grunticon-preview.html',
+            pngfolder    : 'img/svg/png-grunticon',
+            pngpath      : '../img/svg/png-grunticon',
+            template     : '<%= config.src %>/_svg/_template.hbs',
+            defaultWidth : '20px',
+            defaultHeight: '20px'
+          }
+        }
+      },
+
+
        // =====
     // WATCH
     // =====
@@ -198,5 +246,10 @@ module.exports = function(grunt) {
     'cssmin'
     ]);
 
+  grunt.registerTask('svg', [
+    // 'clean:svg',
+    'svgmin',
+    'grunticon'
+  ]);
   // grunt.registerTask('default', ['concat']);
 };

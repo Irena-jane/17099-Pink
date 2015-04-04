@@ -28,3 +28,20 @@ function createMenu(selector){
     }
   };
 };
+
+var reviews_slider = new Slider({
+  'selector':'.reviews',
+  'inner_clss':'reviews__container',
+  'item_clss':'reviews__item',
+  'controls_clss':'desktop-hidden',
+  'arrows':true
+
+});
+// if (window.matchMedia('screen and (max-width: 700px)').matches) {
+    var tariffs_slider = new Slider({
+      'selector':'.tariffs',
+      'inner_clss':'tariffs__container',
+      'controls_clss':'mobile-shown'
+    });
+
+// }

@@ -1,10 +1,15 @@
-.tariff__container {
-    border: 2px solid @gray-border;
-    border-width: 0 2px;
-    width: 280px;
-    margin: 0 auto;
-    padding: 19px 0;
-  }
+
+.tariffs {
+  background-color: @gray-light;
+  padding-top: 66px;
+
+
+    @media (max-width:@screen-md-min) {
+      .container();
+    }
+
+}
+
 .tariff {
 
   &__header {
@@ -30,22 +35,51 @@
     border-color: @gray-border;
     border-style: solid;
     border-width: 0 0px 2px;
-    text-transform: uppercase;
-    font-size: 14px;
     color: @blue-text;
 
-    .tariff__container {
-      padding: 15px;
-    }
+
 
   }
-  .enabled {
+  &__container {
+    position: relative;
+    border: 2px solid @gray-border;
+    border-width: 0 2px;
+    width: 280px;
+    margin: 0 auto;
+    // padding: 19px 0;
+    padding: 15px;
+    font-size: 0;
 
+    &:before{
+      content:'';
+      font-size: 14px;
+      text-transform: uppercase;
+      display: inline-block;
+
+    }
+  }
+  &__container-1 {
+    &:before{
+      content: 'Розовый фильтр';
+    }
+  }
+  &__container-2 {
+    &:before{
+      content: 'Смайлики';
+    }
+  }
+  &__container-3 {
+    &:before{
+      content: 'Комментарии';
+    }
   }
   span[class^="icon-"] {
     font-size: 0;
+    position: absolute;
+    right: 20px;
   }
   .icon-yes {
+    top: 20px;
     &:before{
       content: '';
       display: inline-block;
@@ -57,10 +91,10 @@
       border-color: @green;
       transform: rotate(-45deg);
     }
-    // background-image: url('@{i}');
+
   }
   .icon-no {
-    position: relative;
+    top: 27px;
     &:before,
     &:after {
       content: '';
@@ -81,10 +115,40 @@
 
     // background-image: url('@{i}');
   }
-  .hidden {
 
-  }
-  .disabled {
 
+}
+@media (min-width:@screen-md-min) {
+  .tariff {
+    &__container {
+      // width: 100%;
+      width: 153px;
+    }
+    &__container--title {
+      font-size: 14px;
+    }
+    &__container-1,
+    &__container-2,
+    &__container-3 {
+      &:before{
+        content: '';
+      }
+    }
+    &--title {
+      padding-top: 114px;
+    }
   }
+  .icon-yes,
+  .icon-no {
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      width: 21px;
+      height: 24px;
+  }
+}
+@media (min-width:@screen-lg-min) {
+
 }
