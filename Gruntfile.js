@@ -104,6 +104,19 @@ module.exports = function(grunt) {
       },
 
 
+      // =====
+      // CLEAN
+      // =====
+
+
+      clean: {
+        dist: '<%= config.dist %>',
+        svg: [
+          '<%= config.src %>/_svg/svgmin',
+          '<%= config.src %>/img/svg/png-grunticon',
+          '<%= config.src %>/css/grunticon*'
+        ]
+      },
        // =====
     // WATCH
     // =====

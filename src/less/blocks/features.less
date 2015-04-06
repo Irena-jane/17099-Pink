@@ -29,10 +29,6 @@
 
   .container {
     .clearfix();
-    @media (min-width:@screen-lg-min) {
-      display: flex;
-      flex-direction: column;
-    }
   }
 
   &__list {
@@ -41,62 +37,106 @@
     background-color: @gray-light;
     padding-top: 50px;
     text-align: center;
-    @media (min-width:@screen-md-min) {
+  }
+
+  &__caption {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__text {
+    padding: 0 20px 34px;
+    margin-bottom: 0;
+    color: @blue-text;
+  }
+
+
+
+  &__img-wrapper {
+    text-align: center;
+    height: 278px;
+    overflow: hidden;
+  }
+
+
+}
+
+
+
+@media (min-width:@screen-md-min) {
+  .features {
+
+    &__title-elem--first {
+      margin-bottom: 0;
+      width: auto;
+    }
+
+    &__list {
       float: right;
       width: 310px;
       padding-top: 0;
     }
-    @media (min-width:@screen-lg-min) {
+
+    &__title-elem--first {
+      margin-bottom: 0;
+      width: auto;
+    }
+
+    &__img-wrapper {
+        float: left;
+        height: auto;
+
+      &--pa {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+  }
+
+}
+
+
+@media (min-width:@screen-lg-min) {
+  .features {
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    &__list {
       float: none;
       order:2;
       width: auto;
     }
 
-  }
-  &__item {
-     @media (min-width:@screen-lg-min) {
+
+
+    &__item {
       .col3();
       padding: 0 30px 30px;
       &:nth-child(2) {
         .col3--center;
       }
     }
-  }
-  &__caption {
-    font-size: 18px;
-    font-weight: 700;
-    @media (min-width:@screen-lg-min) {
+
+
+    &__caption {
       font-size: 30px;
     }
-  }
-  &__text {
-    padding: 0 20px 34px;
-    margin-bottom: 0;
-    color: @blue-text;
-    @media (min-width:@screen-lg-min) {
+    &__text {
       font-size: 18px;
       padding: 0;
     }
-  }
 
-  &__imgs {
-    @media (min-width:@screen-lg-min) {
+    &__imgs {
       position: relative;
       top:-50px;
       order:1;
     }
-  }
 
-  &__img-wrapper {
-    text-align: center;
-    height: 278px;
-    overflow: hidden;
-
-    @media (min-width:@screen-md-min) {
-      float: left;
-      height: auto;
-    }
-    @media (min-width:@screen-lg-min) {
+    &__img-wrapper {
       background: url('@{i}iphone-case-1@1x.png') center top no-repeat;
       background-size: 190px;
       position: relative;
@@ -107,27 +147,26 @@
         .col3--center();
       }
 
-    }
-    &--pa {
-      @media (min-width:@screen-md-min) {
-        position: absolute;
-        bottom: 0;
+      &--pa {
+        position: relative;
       }
-
     }
+
+
+    &__picture {
+      position: absolute;
+      bottom: -16px;
+      left: 70px;
+      // width: 180px;
+
+      img{
+        width: 160px;
+      }
+    }
+
+
   }
 
-&__picture {
-  @media (min-width:@screen-lg-min) {
-    position: absolute;
-    bottom: -16px;
-    left: 70px;
-    // width: 180px;
 
-    img{
-      width: 160px;
-    }
-  }
-}
 
 }

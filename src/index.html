@@ -6,8 +6,13 @@
   <title>HTML Academy: Pink</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/google-style.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
+    <script src="js/grunticon-loader.js"></script>
+   <script>
+     grunticon(["css/grunticon-icons.data.svg.css", "css/grunticon-icons.data.png.css", "css/grunticon-icons.fallback.css"], grunticon.svgLoadedCallback);
+   </script>
+   <noscript><link href="css/grunticon-icons.fallback.css" rel="stylesheet"></noscript>
 </head>
 
 <body>
@@ -25,15 +30,16 @@
             переключить меню
             <span class="main-nav__icon-toggle"></span>
           </button>
+          <ul class="main-nav__list js-menu">
+            <li><a href="#intro">Информация</a></li>
+            <li><a href="#features">Возможности</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#tariffs">Стоимость</a></li>
+          </ul>
         </div>
 
 
-        <ul class="main-nav__list js-menu">
-          <li><a href="#intro">Информация</a></li>
-          <li><a href="#features">Возможности</a></li>
-          <li><a href="#reviews">Отзывы</a></li>
-          <li><a href="#tariffs">Стоимость</a></li>
-        </ul>
+
       </nav>
 
 
@@ -120,18 +126,18 @@
 
         </div>
 
-        <div class="british-joy mobile-hidden">
+        <div class="promo mobile-hidden">
           <div class="container">
-            <div class="british-joy__img-wrapper">
+            <div class="promo__img-wrapper">
               <picture>
                 <source srcset="_svg/timer.svg" media="(min-width: 1200px)">
                 <img src="_svg/timer.svg" alt="clock" width="auto" height="auto">
               </picture>
             </div>
-            <div class="british-joy__content">
-              <div class="british-joy__title">Эффект  на 24 часа!</div>
-              <p class="british-joy__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-              <div class="british-joy__link">Узнать больше об исследовании</div>
+            <div class="promo__content">
+              <div class="promo__title">Эффект  на 24 часа!</div>
+              <p class="promo__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <div class="promo__link">Узнать больше об исследовании</div>
             </div>
           </div>
         </div>
@@ -367,7 +373,7 @@
 
             <dl class="contacts__list contacts__list-2">
               <dt class="contacts__caption">Пишите:</dt>
-              <dd class="contacts__text">hello@pinkapp.ru</dd>
+              <dd class="contacts__text"><a class="contacts__mail" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></dd>
             </dl>
 
             <dl class="contacts__list contacts__list-3">

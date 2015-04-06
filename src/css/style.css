@@ -245,6 +245,26 @@ th {
 	padding: 0 20px;
 }
 
+.container:before,
+.container:after {
+	content: " ";
+	display: table;
+}
+
+.container:after {
+	clear: both;
+}
+
+.container:before,
+.container:after {
+	content: " ";
+	display: table;
+}
+
+.container:after {
+	clear: both;
+}
+
 .main-nav {
 	position: absolute;
 	width: 100%;
@@ -276,6 +296,7 @@ th {
 	left: 0;
 	right: 0;
 	margin: auto;
+	transition: width 200ms ease-in-out, background 0.2s;
 }
 
 .main-nav__icon-toggle:before,
@@ -300,20 +321,25 @@ th {
 .main-nav__icon-toggle:before {
 	top: -10px;
 	transition: all .2s;
+	transition-delay: .4s;
 }
 
 .main-nav__icon-toggle:after {
 	top: 10px;
 	transition: all .2s;
+	transition-delay: .4s;
 }
 
 .main-nav__list {
 	margin: 0;
 	padding-left: 0;
 	list-style: none;
-	width: 100%;
+	position: fixed;
+	left: 0;
+	right: 0;
 	overflow: hidden;
 	max-height: 0px;
+	z-index: -1;
 	transition: max-height 0.4s;
 }
 
@@ -370,6 +396,7 @@ th {
 	right: 0;
 	background: 0 0;
 	width: 30px;
+	transition-delay: .0s;
 }
 
 .menu-opened .main-nav__icon-toggle:before,
@@ -379,15 +406,15 @@ th {
 }
 
 .menu-opened .main-nav__icon-toggle:before {
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.menu-opened .main-nav__icon-toggle:after {
 	-webkit-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
+}
+
+.menu-opened .main-nav__icon-toggle:after {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .a-btn,
@@ -422,6 +449,17 @@ th {
 	font-weight: 600;
 }
 
+.btn-download:hover,
+.btn-download:focus {
+	color: #d22856;
+	background-color: #fff;
+	border-color: #fff;
+}
+
+.btn-download:active {
+	color: #f2cdd4;
+}
+
 .intro {
 	background-color: #1d2631;
 }
@@ -453,6 +491,46 @@ th {
 	background-color: #1d2631;
 }
 
+.intro__download:before,
+.intro__download:after {
+	content: " ";
+	display: table;
+}
+
+.intro__download:after {
+	clear: both;
+}
+
+.intro__download:before,
+.intro__download:after {
+	content: " ";
+	display: table;
+}
+
+.intro__download:after {
+	clear: both;
+}
+
+.intro__download:before,
+.intro__download:after {
+	content: " ";
+	display: table;
+}
+
+.intro__download:after {
+	clear: both;
+}
+
+.intro__download:before,
+.intro__download:after {
+	content: " ";
+	display: table;
+}
+
+.intro__download:after {
+	clear: both;
+}
+
 .intro__img-wrapper {
 	padding: 28px 0 0 0;
 }
@@ -480,6 +558,7 @@ th {
 	font-size: 32px;
 	line-height: 44px;
 	text-transform: uppercase;
+	display: inline-block;
 }
 
 .page-top .logo a {
@@ -581,53 +660,33 @@ th {
 	overflow: hidden;
 }
 
-.british-joy {
+.promo {
 	display: none;
 	padding-top: 58px;
 	padding-bottom: 10px;
 }
 
-.british-joy .container:before,
-.british-joy .container:after {
-	content: " ";
-	display: table;
-}
-
-.british-joy .container:after {
-	clear: both;
-}
-
-.british-joy .container:before,
-.british-joy .container:after {
-	content: " ";
-	display: table;
-}
-
-.british-joy .container:after {
-	clear: both;
-}
-
-.british-joy__img-wrapper {
+.promo__img-wrapper {
 	float: left;
 	margin-right: 40px;
 }
 
-.british-joy__img-wrapper img {
+.promo__img-wrapper img {
 	width: 263px;
 }
 
-.british-joy__content {
+.promo__content {
 	float: right;
 	width: 310px;
 }
 
-.british-joy__title {
+.promo__title {
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
 }
 
-.british-joy__link {
+.promo__link {
 	color: #d22856;
 	text-decoration: underline;
 }
@@ -642,11 +701,91 @@ th {
 	padding: 0 20px;
 }
 
+.reviews__container:before,
+.reviews__container:after {
+	content: " ";
+	display: table;
+}
+
+.reviews__container:after {
+	clear: both;
+}
+
+.reviews__container:before,
+.reviews__container:after {
+	content: " ";
+	display: table;
+}
+
+.reviews__container:after {
+	clear: both;
+}
+
+.reviews__container:before,
+.reviews__container:after {
+	content: " ";
+	display: table;
+}
+
+.reviews__container:after {
+	clear: both;
+}
+
+.reviews__container:before,
+.reviews__container:after {
+	content: " ";
+	display: table;
+}
+
+.reviews__container:after {
+	clear: both;
+}
+
 .reviews__item {
 	margin: auto;
 	position: relative;
 	padding: 0 20px;
 	padding: 0;
+}
+
+.reviews__item:before,
+.reviews__item:after {
+	content: " ";
+	display: table;
+}
+
+.reviews__item:after {
+	clear: both;
+}
+
+.reviews__item:before,
+.reviews__item:after {
+	content: " ";
+	display: table;
+}
+
+.reviews__item:after {
+	clear: both;
+}
+
+.reviews__item:before,
+.reviews__item:after {
+	content: " ";
+	display: table;
+}
+
+.reviews__item:after {
+	clear: both;
+}
+
+.reviews__item:before,
+.reviews__item:after {
+	content: " ";
+	display: table;
+}
+
+.reviews__item:after {
+	clear: both;
 }
 
 .review {
@@ -818,8 +957,27 @@ th {
 .contacts__text {
 	font-size: 24px;
 	line-height: 30px;
-	color: #d22856;
 	margin-bottom: 20px;
+	color: #d22856;
+}
+
+.contacts__mail {
+	color: #d22856;
+}
+
+.contacts__mail,
+.contacts__mail:hover,
+.contacts__mail:focus {
+	text-decoration: none;
+}
+
+.contacts__mail:hover,
+.contacts__mail:focus {
+	color: #283645;
+}
+
+.contacts__mail:active {
+	color: #bec2c7;
 }
 
 .page-bottom {
@@ -1103,8 +1261,56 @@ picture {
 	padding: 0 20px;
 }
 
-.main-nav__toggle {
+.main-nav__container:before,
+.main-nav__container:after {
+	content: " ";
+	display: table;
+}
+
+.main-nav__container:after {
+	clear: both;
+}
+
+.main-nav__container:before,
+.main-nav__container:after {
+	content: " ";
+	display: table;
+}
+
+.main-nav__container:after {
+	clear: both;
+}
+
+.main-nav__container:before,
+.main-nav__container:after {
+	content: " ";
+	display: table;
+}
+
+.main-nav__container:after {
+	clear: both;
+}
+
+.main-nav__container:before,
+.main-nav__container:after {
+	content: " ";
+	display: table;
+}
+
+.main-nav__container:after {
+	clear: both;
+}
+
+__toggle {
 	top: 30px;
+}
+
+.intro__download {
+	width: 660px;
+}
+
+.intro__download {
+	width: 660px;
 }
 
 .intro__banner {
@@ -1120,14 +1326,6 @@ picture {
 	font-size: 40px;
 	font-weight: 300;
 	line-height: 48px;
-}
-
-.intro__download {
-	width: 660px;
-}
-
-.intro__download {
-	width: 660px;
 }
 
 .intro__download {
@@ -1170,10 +1368,20 @@ picture {
 	width: auto;
 }
 
+.features__title-elem--first {
+	margin-bottom: 0;
+	width: auto;
+}
+
 .features__list {
 	float: right;
 	width: 310px;
 	padding-top: 0;
+}
+
+.features__title-elem--first {
+	margin-bottom: 0;
+	width: auto;
 }
 
 .features__img-wrapper {
@@ -1186,7 +1394,7 @@ picture {
 	bottom: 0;
 }
 
-.british-joy {
+.promo {
 	display: block;
 }
 
@@ -1381,6 +1589,72 @@ picture {
 	padding: 0 10px;
 }
 
+.main-nav__list {
+	position: static;
+	display: inline-block;
+	overflow: visible;
+	max-height: inherit;
+	float: right;
+	padding-top: 24px;
+}
+
+.main-nav__list li {
+	float: left;
+	width: auto;
+	border: 0px;
+	margin-right: 68px;
+}
+
+.main-nav__list li:first-child {
+	box-shadow: none;
+}
+
+.main-nav__list li a {
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 400;
+	padding: 12px 0 10px;
+	background-color: transparent;
+}
+
+.main-nav__list li a:after {
+	content: '';
+	display: block;
+	margin-top: 10px;
+	width: 0%;
+	height: 2px;
+	background-color: #fff;
+	transition: width 200ms ease-in-out;
+}
+
+.main-nav__list li a:hover:after,
+.main-nav__list li a.active:after,
+.main-nav__list li a:focus:after {
+	width: 100%;
+}
+
+.main-nav__list li a:active {
+	opacity: .3;
+}
+
+.main-nav__list li a:active:after {
+	width: 0;
+}
+
+.main-nav__icon-toggle {
+	display: none;
+}
+
+.intro__download {
+	width: 960px;
+	padding: 0 10px;
+}
+
+.intro__download {
+	width: 960px;
+	padding: 0 10px;
+}
+
 .intro__banner {
 	background-image: url('../img/iphone-hand-3@1x.png'), url('../img/bg_intro_full.jpg');
 	background-size: 960px, cover;
@@ -1389,16 +1663,6 @@ picture {
 
 .intro__slogan {
 	padding-bottom: 50px;
-}
-
-.intro__download {
-	width: 960px;
-	padding: 0 10px;
-}
-
-.intro__download {
-	width: 960px;
-	padding: 0 10px;
 }
 
 .features__title-elem {
@@ -1479,6 +1743,10 @@ picture {
 	margin: 0 20px;
 }
 
+.features__img-wrapper--pa {
+	position: relative;
+}
+
 .features__picture {
 	position: absolute;
 	bottom: -16px;
@@ -1489,26 +1757,26 @@ picture {
 	width: 160px;
 }
 
-.british-joy__img-wrapper img {
+.promo__img-wrapper img {
 	width: 300px;
 }
 
-.british-joy__img-wrapper {
+.promo__img-wrapper {
 	margin-right: 66px;
 }
 
-.british-joy__content {
+.promo__content {
 	float: none;
 	width: auto;
 	padding-top: 100px;
 }
 
-.british-joy__text,
-.british-joy__link {
+.promo__text,
+.promo__link {
 	font-size: 18px;
 }
 
-.british-joy {
+.promo {
 	background-color: #f2f2f2;
 	padding-bottom: 68px;
 }
@@ -1572,6 +1840,46 @@ picture {
 	margin: auto;
 	position: relative;
 	padding: 0 20px;
+}
+
+.tariffs:before,
+.tariffs:after {
+	content: " ";
+	display: table;
+}
+
+.tariffs:after {
+	clear: both;
+}
+
+.tariffs:before,
+.tariffs:after {
+	content: " ";
+	display: table;
+}
+
+.tariffs:after {
+	clear: both;
+}
+
+.tariffs:before,
+.tariffs:after {
+	content: " ";
+	display: table;
+}
+
+.tariffs:after {
+	clear: both;
+}
+
+.tariffs:before,
+.tariffs:after {
+	content: " ";
+	display: table;
+}
+
+.tariffs:after {
+	clear: both;
 }
 
 }

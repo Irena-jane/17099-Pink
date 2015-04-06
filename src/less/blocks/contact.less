@@ -2,37 +2,13 @@
   text-align: center;
   padding-top: 44px;
 
-  @media (min-width:@screen-md-min) {
-      font-size: 0;
-    }
   &__banner {
     &:extend(.banner all);
     color: @blue-dark;
-
-    @media (min-width:@screen-md-min) {
-      margin-bottom: 40px;
-    }
-    @media (min-width:@screen-lg-min) {
-
-    }
   }
+
   &__list {
-    @media (min-width:@screen-md-min) {
-      &-1,
-      &-2 {
-        width: 50%;
-        display: inline-block;
-        vertical-align: top;
-      }
-    }
-    @media (min-width:@screen-lg-min) {
-      &-1,
-      &-2,
-      &-3 {
-        width: 30%;
-        display: inline-block;
-      }
-    }
+
     &-3 {
       padding-bottom: 20px;
     }
@@ -40,27 +16,66 @@
 
   &__caption {
     .h2();
-    @media (min-width:@screen-md-min) {
-
-    }
-    @media (min-width:@screen-lg-min) {
-
-    }
-
   }
 
   &__text {
     font-size: 24px;
     line-height: 30px;
-    color: @red;
     margin-bottom: 20px;
-    @media (min-width:@screen-md-min) {
-      margin-bottom: 40px;
+    color: @red;
+  }
+  &__mail {
+    .a-btn();
+    color: @red;
+    &:hover,
+    &:focus{
+      color: @blue-text;
     }
-    @media (min-width:@screen-lg-min) {
-
+    &:active {
+      color: @gray-ctrl;
     }
-
 
   }
+
+}
+
+@media (min-width:@screen-md-min) {
+  .contacts{
+    font-size: 0;
+
+    &__banner {
+      margin-bottom: 40px;
+    }
+    &__list {
+        &-1,
+        &-2 {
+          width: 50%;
+          display: inline-block;
+          vertical-align: top;
+        }
+
+    }
+
+    &__text {
+      margin-bottom: 40px;
+    }
+  }
+
+}
+
+@media (min-width:@screen-lg-min) {
+  .contacts{
+
+    &__list {
+        &-1,
+        &-2,
+        &-3 {
+          width: 30%;
+          display: inline-block;
+        }
+
+    }
+
+  }
+
 }
