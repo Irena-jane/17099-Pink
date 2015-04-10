@@ -2,6 +2,7 @@
 .reviews {
 
   padding-top: 30px;
+  text-align: center;
   &:extend(.triangle-after all);
 
   &__container {
@@ -15,13 +16,21 @@
     //   width: 700px;
     // }
   }
+  &:before {
+    display: none;
+  }
 }
 
 @media (min-width:@screen-lg-min) {
   .reviews {
+    text-align: center;
     &__item {
       // width: 960px;
       padding: 0 130px;
+    }
+    &:before {
+      color: @gray-ctrl;
+      display: inline-block;
     }
   }
 

@@ -29,6 +29,7 @@
     "grunt-lintspaces": "^0.6.0",
     "grunt-notify": "^0.4.1",
     "grunt-replace": "^0.8.0",
+    "grunt-svgmin": "^2.0.1",
     "load-grunt-tasks": "^3.1.0",
     "time-grunt": "^1.1.0"
   }

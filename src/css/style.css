@@ -281,8 +281,8 @@ th {
 	width: 50px;
 	height: 50px;
 	padding: 0;
-	position: absolute;
-	top: 5px;
+	position: relative;
+	float: right;
 	right: 20px;
 }
 
@@ -349,12 +349,13 @@ th {
 }
 
 .main-nav__list li > a {
-	background-color: #283645;
-	padding: 16px;
+	display: block;
 	color: #fff;
 	text-align: center;
 	font-size: 24px;
 	line-height: 30px;
+	line-height: 62px;
+	height: 62px;
 	font-weight: 700;
 }
 
@@ -369,6 +370,7 @@ th {
 }
 
 .main-nav__list li {
+	background-color: #283645;
 	border-style: solid;
 	border-color: transparent;
 	border-width: 1px 0 1px;
@@ -470,14 +472,14 @@ th {
 	color: #fff;
 	background-image: url('../img/iphone-hand-1.png'), url('../img/bg_intro_1@1x.jpg');
 	background-size: 258px, auto;
-	background-position: center 173px, center top;
+	background-position: center 203px, center top;
 	background-repeat: no-repeat;
 }
 
 .intro__slogan {
 	width: 236px;
 	margin: 0 auto;
-	padding-bottom: 326px;
+	padding-bottom: 356px;
 	text-align: center;
 	font-weight: 300;
 }
@@ -693,6 +695,7 @@ th {
 
 .reviews {
 	padding-top: 30px;
+	text-align: center;
 }
 
 .reviews__container {
@@ -786,6 +789,10 @@ th {
 
 .reviews__item:after {
 	clear: both;
+}
+
+.reviews:before {
+	display: none;
 }
 
 .review {
@@ -984,6 +991,10 @@ th {
 	display: none;
 }
 
+.page-bottom__logo a {
+	font-size: 0;
+}
+
 .page-bottom__socials a,
 .page-bottom__info a {
 	font: 0/0 a;
@@ -993,6 +1004,7 @@ html,
 body {
 	width: 100%;
 	height: 100%;
+	min-width: 320px;
 }
 
 html * {
@@ -1059,7 +1071,7 @@ picture {
 }
 
 .slider__controls {
-	display: table!important;
+	display: table;
 	width: 100%;
 }
 
@@ -1301,8 +1313,8 @@ picture {
 	clear: both;
 }
 
-__toggle {
-	top: 30px;
+.main-nav__toggle {
+	margin-top: 30px;
 }
 
 .intro__download {
@@ -1603,6 +1615,7 @@ __toggle {
 	width: auto;
 	border: 0px;
 	margin-right: 68px;
+	background-color: transparent;
 }
 
 .main-nav__list li:first-child {
@@ -1611,7 +1624,7 @@ __toggle {
 
 .main-nav__list li a {
 	font-size: 18px;
-	line-height: 18px;
+	line-height: 35px;
 	font-weight: 400;
 	padding: 12px 0 10px;
 	background-color: transparent;
@@ -1801,8 +1814,17 @@ __toggle {
 	padding: 0 10px;
 }
 
+.reviews {
+	text-align: center;
+}
+
 .reviews__item {
 	padding: 0 130px;
+}
+
+.reviews:before {
+	color: #bec2c7;
+	display: inline-block;
 }
 
 .contacts__list-1,

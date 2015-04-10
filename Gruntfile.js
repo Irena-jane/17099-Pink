@@ -94,8 +94,9 @@ module.exports = function(grunt) {
             datapngcss   : 'css/grunticon-icons.data.png.css',
             urlpngcss    : 'css/grunticon-icons.fallback.css',
             previewhtml  : '_grunticon-preview.html',
-            pngfolder    : 'img/svg/png-grunticon',
-            pngpath      : '../img/svg/png-grunticon',
+            loadersnippet: 'js/grunticon.loader.js',
+            pngfolder    : 'img/png',
+            pngpath      : '../img/png',
             template     : '<%= config.src %>/_svg/_template.hbs',
             defaultWidth : '20px',
             defaultHeight: '20px'

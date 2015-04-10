@@ -7,8 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.min.css">
-
-    <script src="js/grunticon-loader.js"></script>
+  <script>
+    document.documentElement.className =
+       document.documentElement.className.replace("no-js","js");
+  </script>
+  <script src="js/grunticon.loader.js"></script>
    <script>
      grunticon(["css/grunticon-icons.data.svg.css", "css/grunticon-icons.data.png.css", "css/grunticon-icons.fallback.css"], grunticon.svgLoadedCallback);
    </script>
@@ -102,7 +105,7 @@
                 <picture class="features__picture">
                    <source srcset="img/iphone-screen-1-1@1x.png" media="(min-width: 1200px)">
                    <source srcset="img/iphone_2_3@1x.png" media="(min-width: 700px)">
-                   <img src="img/iphone-screen-1-1@1x" alt="iphone" width="auto" height="auto">
+                   <img src="img/iphone-screen-1-1@1x.png" alt="iphone" width="auto" height="auto">
                 </picture>
               </div>
               <div class="features__img-wrapper laptop-hidden">
@@ -142,7 +145,7 @@
           </div>
         </div>
 
-        <div id="reviews" class="slider reviews">
+        <div id="reviews" class="slider reviews icon-quotes">
 
 
 
@@ -366,20 +369,23 @@
         <div class="contacts">
           <div class="contacts__banner">Остались вопросы? <br class="mobile-hiden">Свяжитесь с нами!</div>
           <div class="triangle-white">
-            <dl class="contacts__list contacts__list-1">
-              <dt class="contacts__caption">Звоните:</dt>
-              <dd class="contacts__text">8 (800) 1000 900</dd>
-            </dl>
+            <div class="container">
+              <dl class="contacts__list contacts__list-1">
+                <dt class="contacts__caption">Звоните:</dt>
+                <dd class="contacts__text">8 (800) 1000 900</dd>
+              </dl>
 
-            <dl class="contacts__list contacts__list-2">
-              <dt class="contacts__caption">Пишите:</dt>
-              <dd class="contacts__text"><a class="contacts__mail" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></dd>
-            </dl>
+              <dl class="contacts__list contacts__list-2">
+                <dt class="contacts__caption">Пишите:</dt>
+                <dd class="contacts__text"><a class="contacts__mail" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></dd>
+              </dl>
 
-            <dl class="contacts__list contacts__list-3">
-              <dt class="contacts__caption">Приезжайте в гости:</dt>
-              <dd class="contacts__text">Санкт-Петербург, <br> Невский проспект, д. 20</dd>
-            </dl>
+              <dl class="contacts__list contacts__list-3">
+                <dt class="contacts__caption">Приезжайте в гости:</dt>
+                <dd class="contacts__text">Санкт-Петербург, <br> Невский проспект, д. 20</dd>
+              </dl>
+            </div>
+
           </div>
 
 
@@ -391,16 +397,19 @@
 
     </main>
     <footer class="page-bottom">
-      <div class="page-bottom__logo"><a href="#0">pink</a></div>
-      <div class="page-bottom__socials">
-        <a href="http://twitter.com">twitter</a>
-        <a href="http://facebook.com">facebook</a>
-        <a href="http://youtube.com">youtube</a>
+      <div class="container">
+        <div class="page-bottom__logo"><a class="icon-logotype-blue-3" data-grunticon-embed href="#0">pink</a></div>
+        <div class="page-bottom__socials">
+          <a class="icon-twitter" href="http://twitter.com">twitter</a>
+          <a class="icon-facebook" href="http://facebook.com">facebook</a>
+          <a class="icon-youtube" href="http://youtube.com">youtube</a>
+        </div>
+        <div class="page-bottom__info">
+          Website by <a href="http://gluchanko.ru" class="icon-glukhanko">http://gluchanko.ru</a>
+          for <a href="http://htmlacademy.ru" class="icon-htmlacademy">http://htmlacademy.ru</a>
+        </div>
       </div>
-      <div class="page-bottom__info">
-        Website by <a href="http://gluchanko.ru" class="icon-author">http://gluchanko.ru</a>
-        for <a href="http://htmlacademy.ru" class="icon-htmlacademy">http://htmlacademy.ru</a>
-      </div>
+
     </footer>
 
   </div>
@@ -411,5 +420,6 @@
   <script src="js/google-map.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/scripts.js"></script>
+
 </body>
 </html>

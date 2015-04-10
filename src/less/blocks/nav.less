@@ -13,9 +13,14 @@
       width: 50px;
       height: 50px;
       padding: 0;
-      position: absolute;
-      top: 5px;
+
+      position: relative;
+      float: right;
       right: 20px;
+      // .navbar-vertical-align(50px)
+      // position: absolute;
+      // top: 5px;
+      // right: 20px;
 
       &:focus {
         outline: none;
@@ -72,22 +77,24 @@
 
     li, a {
       display: block;
-
     }
     li > a {
       .a-btn();
-      background-color: @blue-text;
-      padding: 16px;
+      display: block;
+      // padding: 16px;
       color: #fff;
       text-align: center;
       font-size: 24px;
       line-height: 30px;
+      line-height: 62px;
+      height: 62px;
       font-weight: 700;
     }
     li:first-child {
       box-shadow: 0px -1px 0px #000;
     }
     li {
+      background-color: @blue-text;
       border-style: solid;
       border-color: transparent;
       border-width: 1px 0 1px;
@@ -104,10 +111,11 @@
   &__container {
       .container();
     }
+    &__toggle {
+      margin-top:27px;
+    }
   }
-  &__toggle {
-    top:30px;
-  }
+
 }
 
 @media (min-width:@screen-lg-min) {
@@ -124,12 +132,13 @@
         width: auto;
         border: 0px;
         margin-right: 68px;
+        background-color: transparent;
         &:first-child{
           box-shadow: none;
         }
         a {
           font-size: 18px;
-          line-height: 18px;
+          line-height: 35px;
           font-weight: 400;
           padding: 12px 0 10px;
           // border-style: solid;
