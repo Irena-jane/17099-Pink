@@ -38,11 +38,12 @@
   }
 }
 .mobile-shown {
-  display: inherit;
+  display: block;
   @media (min-width:@screen-md-min) {
     display: none;
   }
 }
+
 .desktop-shown {
   display: none;
   @media (min-width:@screen-lg-min) {
@@ -55,6 +56,7 @@
   padding-left: 0;
   list-style: none;
 }
+
 .triangle-after {
   .triangle-after();
 }

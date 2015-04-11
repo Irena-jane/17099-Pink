@@ -20,7 +20,7 @@ function Slider(options){
   controls.innerHTML = '<div class="slider__ctrl-inner"><a class="active" href="#0">1</a><a href="#0">2</a><a href="#0">3</a></div>';
 
   if(options.arrows) {
-    list.innerHTML = '<a href="#0" class="slider__prev desktop-shown">Prev</a><a href="#0" class="slider__next desktop-shown">Next</a>';
+    list.innerHTML = '<a href="#0" data-dir = "prev" class="slider__prev desktop-shown js-slider-link">Prev</a><a href="#0" data-dir = "next" class="slider__next desktop-shown js-slider-link">Next</a>';
   }
 
 
@@ -34,25 +34,18 @@ function Slider(options){
   this.elem.appendChild(inner);
   this.elem.appendChild(controls);
 
-  // if(option.arrows) {
-  //   var prev = document.querySelector('.slider__prev');
-  //   var next = document.querySelector('.slider__next');
-
-  // }
-
-  // function onArrowClick(e){
-  //   var e = e || window.event;
-  //   var target = e.target;
-
-  //   if()
-  // };
+  if(options.arrows) {
+      // var arrows = document.querySelectorAll('.js-slider-link');
+      // console.log(arrows);
+      self.list.onclick = onArrowsClick;
+  }
 
     var slider_list = self.elem.children[0].children[0];
     var sliderCtrls = self.elem.querySelectorAll('.slider__controls a');
     var slen=sliderCtrls.length;
-    var slideWidth;
+    var slideWidth, slider_list_width;
     onResize();
-
+    // slider_list.style.width = slideWidth*slen;
     var slides = self.elem.querySelectorAll(self.selector+'__item');
 
     for(var i=0; i<slen;i++){
@@ -81,12 +74,34 @@ function Slider(options){
       showSlide.prev = self.list.children[(numSlide-1)];
     };
 
+    function onArrowsClick(e){
+      if(self.list.classList.contains('in-progress')) return;
+      self.list.classList.add('in-progress');
+      var e = e || window.event;
+      var target = e.target;
+      if(target.classList.contains('js-slider-link')){
+        var dir = target.dataset.dir ==='prev'? 1:-1;
+        var marginLeft = parseInt(getComputedStyle(document.querySelector('.slider__list')).marginLeft) + slideWidth*dir;
+        console.log(marginLeft);
+        if(marginLeft <= -slider_list_width) marginLeft = 0;
+         console.log(marginLeft);
+        if(marginLeft > 0) marginLeft = -slider_list_width+slideWidth;
+         console.log(marginLeft);
+        // marginLeft = Math.max()
+        self.list.style.marginLeft = marginLeft + 'px';
+        setTimeout(function(){
+          self.list.classList.remove('in-progress');
+        }, 400);
+      }
+
+    };
+
     function onResize(){
 
     slideWidth = parseInt(getComputedStyle(self.elem.querySelector('.slider__item')).width);
+    slider_list_width = slideWidth*slen;
+    slider_list.style.width = slider_list_width + 'px';
 
-
-    // console.log(slideWidth);
     };
-    window.onresize = onResize;
+    // window.onresize = onResize;
 };

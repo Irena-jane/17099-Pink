@@ -39,9 +39,13 @@
   margin-top: ((@navbar-height - @element-height) / 2);
   margin-bottom: ((@navbar-height - @element-height) / 2);
 }
-
+.footer-vertical-align(@elem-h, @foo-h) {
+  padding-top: ((@foo-h - @elem-h) / 2);
+  padding-bottom: ((@foo-h - @elem-h) / 2);
+}
 .triangle-after() {
   &:after {
+      &:extend(.triangle-gray:before all);
       content: " ";
       display: block;
       height: 36px;

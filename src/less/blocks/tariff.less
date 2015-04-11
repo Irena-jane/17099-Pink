@@ -1,23 +1,52 @@
-
-.tariffs {
+.tariffs-wrap {
   background-color: @gray-light;
   padding-top: 66px;
+}
+
+.tariffs {
+     background-image:linear-gradient(to bottom, @blue-dark 115px, #fff 115px, #fff 174px, @gray-border 174px, @gray-border 176px,#fff 176px, #fff 235px, @gray-border 235px, @gray-border 237px, #fff 237px, #fff 296px, @gray-border 296px, @gray-border 298px);
 
 
-    @media (max-width:@screen-md-min) {
-      .container();
-    }
+  &__container {
+    .container();
+    border-bottom: 2px solid @gray-border;
+  }
+  &--laptop {
+    display: none;
+  }
 
 }
 
 .tariff {
 
+
   &__header {
-    background-color: @blue-dark;
-    padding: 0px 20px;
+    // background-color: @blue-dark;
+    margin: 0 20px 0 0;
+    // padding: 0px 20px;
     color: #fff;
     text-align:center;
 
+  }
+  &--hit {
+    overflow: hidden;
+    position: relative;
+    &:before{
+      content:'Хит';
+      position: absolute;
+      width: 88px;
+      height: 28px;
+      line-height: 28px;
+      top: -25px;
+      left: -35px;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;
+      transform-origin:100%;
+      transform:rotate(-45deg);
+      background-color: @red;
+    }
   }
   .h2 {
     text-transform: uppercase;
@@ -32,7 +61,8 @@
 
   }
   &__item {
-    border-color: @gray-border;
+    // border-color: @gray-border;
+    border-color: transparent;
     border-style: solid;
     border-width: 0 0px 2px;
     color: @blue-text;
@@ -45,8 +75,9 @@
     border: 2px solid @gray-border;
     border-width: 0 2px;
     width: 280px;
-    margin: 0 auto;
+    // margin: 0 auto;
     // padding: 19px 0;
+    margin-right: 20px;
     padding: 15px;
     font-size: 0;
 
@@ -87,7 +118,7 @@
       width: 20px;
       height: 10px;
       border-style: solid;
-      border-width: 0px 0px 1px 1px;
+      border-width: 0px 0px 2px 2px;
       border-color: @green;
       transform: rotate(-45deg);
     }
@@ -102,8 +133,9 @@
       top: 0;
       right: 0;
       display: block;
-      width: 20px;
-      height: 1px;background-color: @red-light;
+      width: 26px;
+      height: 2px;
+      background-color: @red-light;
     }
     &:before{
       transform: rotate(45deg);
@@ -113,43 +145,110 @@
       transform: rotate(-45deg);
     }
 
-    // background-image: url('@{i}');
   }
 
 
 }
 @media (min-width:@screen-md-min) {
-  .tariff {
-    &__container {
-      // width: 100%;
-      width: 153px;
+  .tariffs-wrap {
+    padding-bottom: 70px;
+  }
+  .tariffs {
+    background-image: none;
+    background-color: @gray-light;
+    &--mobile {
+      display: none;
     }
-    &__container--title {
+    &--laptop {
+      display: block;
+    }
+  }
+
+
+  .tariff {
+    .container;
+    background-color: @gray-light;
+    &__header {
+      background-color: @blue-dark;
+      border-bottom: 2px solid @blue-dark;
+      padding: 12px 0 8px;
+      border-right: 2px solid @gray-border;
+    }
+    &__item th {
+      width: 25%;
+    }
+    &__no-display {
+      background-color: transparent;
+      border-bottom: 2px solid @gray-border;
+    }
+    &__td {
+      background-color: #fff;
+      padding: 15px;
+      border-style: solid;
+      border-color: @gray-border;
+      border-width: 0 2px 2px 0;
+      // text-align: center;
+
+    }
+    &__td:first-child {
+      border-left-width: 2px;
       font-size: 14px;
     }
-    &__container-1,
-    &__container-2,
-    &__container-3 {
-      &:before{
-        content: '';
+
+    &__header {
+      .h2{
+        font-size: 16px;
       }
     }
-    &--title {
-      padding-top: 114px;
+    &__price {
+      font-size: 18px;
     }
+
+    .icon-yes,
+    .icon-no {
+      position: relative;
+      font-size: 0;
+      text-align: center;
+      top: 0px;
+    }
+    .icon-no {
+      &:before,
+      &:after {
+        position: relative;
+        display: inline-block;
+      }
+      &:before{
+        transform: translate(13px) rotate(45deg);
+      }
+      &:after{
+        transform: translate(-13px) rotate(-45deg);
+      }
+    }
+
   }
-  .icon-yes,
-  .icon-no {
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      margin: auto;
-      width: 21px;
-      height: 24px;
-  }
+
 }
 
 @media (min-width:@screen-lg-min) {
+    .tariffs-wrap {
+      padding-bottom: 97px;
+    }
+    .tariff {
+      &__td{
+        padding:19px 24px;
+        &:first-child{
+          font-size: 18px;
+        }
+      }
+      &__header {
+        padding: 20px 18px;
+        .h2{
+          font-size: 18px;
+        }
+      }
+      &__price {
+        font-size: 24px;
+      }
 
+    }
 }

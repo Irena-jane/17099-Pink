@@ -37,11 +37,9 @@ var reviews_slider = new Slider({
   'arrows':true
 
 });
-// if (window.matchMedia('screen and (max-width: 700px)').matches) {
+
     var tariffs_slider = new Slider({
       'selector':'.tariffs',
-      'inner_clss':'tariffs__container',
-      'controls_clss':'mobile-shown'
+      'inner_clss':'tariffs__container'
     });
 
-// }
