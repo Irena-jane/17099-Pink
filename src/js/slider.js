@@ -35,8 +35,7 @@ function Slider(options){
   this.elem.appendChild(controls);
 
   if(options.arrows) {
-      // var arrows = document.querySelectorAll('.js-slider-link');
-      // console.log(arrows);
+
       self.list.onclick = onArrowsClick;
   }
 
@@ -45,7 +44,7 @@ function Slider(options){
     var slen=sliderCtrls.length;
     var slideWidth, slider_list_width;
     onResize();
-    // slider_list.style.width = slideWidth*slen;
+
     var slides = self.elem.querySelectorAll(self.selector+'__item');
 
     for(var i=0; i<slen;i++){
@@ -82,12 +81,10 @@ function Slider(options){
       if(target.classList.contains('js-slider-link')){
         var dir = target.dataset.dir ==='prev'? 1:-1;
         var marginLeft = parseInt(getComputedStyle(document.querySelector('.slider__list')).marginLeft) + slideWidth*dir;
-        console.log(marginLeft);
+
         if(marginLeft <= -slider_list_width) marginLeft = 0;
-         console.log(marginLeft);
+
         if(marginLeft > 0) marginLeft = -slider_list_width+slideWidth;
-         console.log(marginLeft);
-        // marginLeft = Math.max()
         self.list.style.marginLeft = marginLeft + 'px';
         setTimeout(function(){
           self.list.classList.remove('in-progress');
