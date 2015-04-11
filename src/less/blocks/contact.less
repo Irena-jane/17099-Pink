@@ -10,7 +10,7 @@
 
   &__list {
 
-    &-3 {
+    &--site {
       padding-bottom: 20px;
     }
   }
@@ -62,8 +62,8 @@
       margin-bottom: 40px;
     }
     &__list {
-        &-1,
-        &-2 {
+        &--tel,
+        &--mail {
           width: 50%;
           display: inline-block;
           vertical-align: top;
@@ -86,14 +86,24 @@
 @media (min-width:@screen-lg-min) {
   .contacts{
 
-    &__list {
-        &-1,
-        &-2,
-        &-3 {
-          width: 30%;
-          display: inline-block;
-        }
+    &__container {
+        display: flex;
+        flex-direction: row;
 
+    }
+
+    &__list {
+
+        &--tel {
+          order:1;
+        }
+        &--mail {
+          order:3;
+        }
+        &--site {
+          order:2;
+          width: 50%;
+        }
     }
 
   }

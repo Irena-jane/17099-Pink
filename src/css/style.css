@@ -1044,7 +1044,7 @@ th {
 	color: #1d2631;
 }
 
-.contacts__list-3 {
+.contacts__list--site {
 	padding-bottom: 20px;
 }
 
@@ -1757,8 +1757,8 @@ picture {
 	margin-bottom: 40px;
 }
 
-.contacts__list-1,
-.contacts__list-2 {
+.contacts__list--tel,
+.contacts__list--mail {
 	width: 50%;
 	display: inline-block;
 	vertical-align: top;
@@ -2172,11 +2172,32 @@ picture {
 	font-size: 24px;
 }
 
-.contacts__list-1,
-.contacts__list-2,
-.contacts__list-3 {
-	width: 30%;
-	display: inline-block;
+.contacts__container {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.contacts__list--tel {
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+}
+
+.contacts__list--mail {
+	-webkit-order: 3;
+	-ms-flex-order: 3;
+	order: 3;
+}
+
+.contacts__list--site {
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2;
+	width: 50%;
 }
 
 .triangle__elem {
