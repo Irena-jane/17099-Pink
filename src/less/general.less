@@ -16,6 +16,16 @@ img, picture {
   vertical-align: top;
 }
 
+.logo-mobile {
+  width: 74px;
+  height: 24px;
+}
+.logo-laptop,
+.logo-desktop {
+  width: 146px;
+  height: 40px;
+  display: none;
+}
 
 .slider {
   &__inner {
@@ -103,6 +113,25 @@ img, picture {
   }
 }
 
+
+@media (min-width:@screen-md-min) {
+    .logo-mobile,
+    .logo-desktop{
+      display: none;
+    }
+    .logo-laptop{
+      display: inline-block;
+    }
+}
+@media (min-width:@screen-lg-min) {
+    .logo-mobile,
+    .logo-laptop{
+      display: none;
+    }
+    .logo-desktop{
+      display: inline-block;
+    }
+}
 
 
 

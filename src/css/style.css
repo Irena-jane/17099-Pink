@@ -284,6 +284,7 @@ th {
 	height: 50px;
 	padding: 0;
 	position: relative;
+	top: 4px;
 	float: right;
 	right: 20px;
 }
@@ -354,7 +355,8 @@ th {
 	display: block;
 	color: #fff;
 	text-align: center;
-	font-size: 24px;
+	font-size: 18px;
+	text-transform: uppercase;
 	line-height: 30px;
 	line-height: 62px;
 	height: 62px;
@@ -365,6 +367,16 @@ th {
 .main-nav__list li > a:hover,
 .main-nav__list li > a:focus {
 	text-decoration: none;
+}
+
+.main-nav__list li > a:hover,
+.main-nav__list li > a:focus {
+	color: #d22856;
+}
+
+.main-nav__list li > a:active {
+	color: #d22856;
+	opacity: .3;
 }
 
 .main-nav__list li:first-child {
@@ -558,21 +570,22 @@ th {
 	background: rgba(29, 38, 49, 0.3);
 }
 
-.page-top .logo {
+.page-top__logo {
 	font-size: 32px;
 	line-height: 44px;
 	text-transform: uppercase;
 	display: inline-block;
+	font-size: 0;
 }
 
-.page-top .logo a {
+.page-top__logo-link {
 	color: #fff;
-	padding: 10px 0;
+	padding: 10px 0 10px 20px;
 	display: inline-block;
 }
 
-.page-top .logo a,
-.page-top .logo a:hover .page-top .logo a:focus {
+.page-top__logo-link,
+.page-top__logo-link:hover .page-top__logo-link:focus {
 	text-decoration: none;
 }
 
@@ -958,15 +971,15 @@ th {
 	display: inline-block;
 }
 
-.tariff__container-1:before {
+.tariff__container--1:before {
 	content: 'Розовый фильтр';
 }
 
-.tariff__container-2:before {
+.tariff__container--2:before {
 	content: 'Смайлики';
 }
 
-.tariff__container-3:before {
+.tariff__container--3:before {
 	content: 'Комментарии';
 }
 
@@ -1069,6 +1082,18 @@ th {
 	color: #bec2c7;
 }
 
+.triangle {
+	position: relative;
+}
+
+.triangle__elem {
+	position: absolute;
+	left: 0;
+	z-index: 2;
+	height: 36px;
+	bottom: -36px;
+}
+
 .page-bottom {
 	display: none;
 }
@@ -1136,6 +1161,18 @@ body {
 img,
 picture {
 	vertical-align: top;
+}
+
+.logo-mobile {
+	width: 74px;
+	height: 24px;
+}
+
+.logo-laptop,
+.logo-desktop {
+	width: 146px;
+	height: 40px;
+	display: none;
 }
 
 .slider__inner {
@@ -1445,6 +1482,7 @@ picture {
 
 .main-nav__toggle {
 	margin-top: 27px;
+	top: 0;
 }
 
 .intro__download {
@@ -1491,8 +1529,8 @@ picture {
 	padding-bottom: 110px;
 }
 
-.page-top .logo a {
-	padding: 33px 0;
+.page-top__logo a {
+	padding: 25px 0 40px;
 }
 
 .features__title-elem {
@@ -1730,6 +1768,11 @@ picture {
 	margin-bottom: 40px;
 }
 
+.triangle__elem {
+	height: 74px;
+	bottom: -74px;
+}
+
 .page-bottom {
 	display: block;
 }
@@ -1757,6 +1800,15 @@ picture {
 
 .page-bottom .icon-htmlacademy:before {
 	margin: 0 0 0 10px;
+}
+
+.logo-mobile,
+.logo-desktop {
+	display: none;
+}
+
+.logo-laptop {
+	display: inline-block;
 }
 
 .mobile-hidden {
@@ -1876,17 +1928,23 @@ picture {
 	line-height: 35px;
 	font-weight: 400;
 	padding: 12px 0 10px;
+	text-transform: none;
 	background-color: transparent;
 }
 
 .main-nav__list li a:after {
 	content: '';
 	display: block;
-	margin-top: 10px;
 	width: 0%;
 	height: 2px;
 	background-color: #fff;
 	transition: width 200ms ease-in-out;
+}
+
+.main-nav__list li a:hover,
+.main-nav__list li a.active,
+.main-nav__list li a:focus {
+	color: #fff;
 }
 
 .main-nav__list li a:hover:after,
@@ -2121,6 +2179,11 @@ picture {
 	display: inline-block;
 }
 
+.triangle__elem {
+	height: 124px;
+	bottom: -124px;
+}
+
 .page-bottom__inner {
 	height: 198px;
 	padding-top: 73px;
@@ -2129,6 +2192,15 @@ picture {
 
 .page-bottom__logo {
 	margin-right: 230px;
+}
+
+.logo-mobile,
+.logo-laptop {
+	display: none;
+}
+
+.logo-desktop {
+	display: inline-block;
 }
 
 .mobile-hidden {

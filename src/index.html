@@ -26,8 +26,13 @@
       <nav class="main-nav">
         <div class="main-nav__container">
 
-          <div class="logo">
-            <a href="/">Pink</a>
+          <div class="page-top__logo">
+            <a class="page-top__logo-link" href="/">Pink
+              <i class=" icon-logotype-white-1 logo-mobile"></i>
+              <i class=" icon-logotype-white-2 logo-laptop"></i>
+              <i class=" icon-logotype-white-3 logo-desktop"></i>
+
+            </a>
           </div>
           <button class="main-nav__toggle js-menu-toggle">
             переключить меню
@@ -192,17 +197,17 @@
 
                 <div class="tariff__list">
                   <div class="tariff__item">
-                    <div class="tariff__container tariff__container-1">
+                    <div class="tariff__container tariff__container--1">
                       <span class="icon-yes"> - yes</span>
                     </div>
                   </div>
                   <div class="tariff__item">
-                    <div class="tariff__container tariff__container-2">
+                    <div class="tariff__container tariff__container--2">
                       <span class="icon-no"> - no</span>
                     </div>
                   </div>
                   <div class="tariff__item">
-                    <div class="tariff__container tariff__container-3">
+                    <div class="tariff__container tariff__container--3">
                       <span class="icon-no"> - no</span>
                     </div>
                   </div>
@@ -311,7 +316,7 @@
 
         <div class="contacts">
           <div class="contacts__banner">Остались вопросы? <br class="mobile-hiden">Свяжитесь с нами!</div>
-          <div class="triangle-white">
+          <div class="triangle">
             <div class="container">
               <dl class="contacts__list contacts__list-1">
                 <dt class="contacts__caption">Звоните:</dt>
@@ -328,7 +333,9 @@
                 <dd class="contacts__text">Санкт-Петербург, <br> Невский проспект, д. 20</dd>
               </dl>
             </div>
-
+            <svg class="triangle__elem" width="100%" height="36" viewBox="0 0 10 10" preserveAspectRatio="none">
+              <polygon points="0,0 10,0 5,10 " style="fill:#fff;"/>
+            </svg>
           </div>
 
 
@@ -342,7 +349,12 @@
 
     <footer class="page-bottom">
       <div class="page-bottom__inner container">
-        <div class="page-bottom__logo"><a class="icon-logotype-blue-3" data-grunticon-embed href="#0">pink</a></div>
+        <div class="page-bottom__logo">
+          <a class="page-bottom__logo-link" data-grunticon-embed href="#0">pink
+            <i class="icon-logotype-blue-2 logo-laptop"></i>
+            <i class="icon-logotype-blue-3 logo-desktop"></i>
+          </a>
+        </div>
         <div class="page-bottom__socials">
           <a class="icon-twitter" href="http://twitter.com">twitter</a>
           <a class="icon-facebook" href="http://facebook.com">facebook</a>

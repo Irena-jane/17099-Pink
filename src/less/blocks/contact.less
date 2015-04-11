@@ -2,6 +2,7 @@
   text-align: center;
   padding-top: 44px;
 
+
   &__banner {
     &:extend(.banner all);
     color: @blue-dark;
@@ -38,6 +39,20 @@
   }
 
 }
+.triangle-h(@h){
+  height: @h;
+  bottom:-@h;
+}
+.triangle {
+  position: relative;
+  &__elem {
+    position: absolute;
+    left: 0;
+    bottom: -36px;
+    z-index: 2;
+    .triangle-h(36px);
+  }
+}
 
 @media (min-width:@screen-md-min) {
   .contacts{
@@ -60,6 +75,11 @@
       margin-bottom: 40px;
     }
   }
+  .triangle {
+    &__elem {
+      .triangle-h(74px);
+    }
+  }
 
 }
 
@@ -76,6 +96,11 @@
 
     }
 
+  }
+  .triangle {
+    &__elem {
+      .triangle-h(124px);
+    }
   }
 
 }

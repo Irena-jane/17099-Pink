@@ -17,6 +17,7 @@
       padding: 0;
 
       position: relative;
+      top: 4px;
       float: right;
       right: 20px;
       // .navbar-vertical-align(50px)
@@ -85,11 +86,21 @@
       // padding: 16px;
       color: #fff;
       text-align: center;
-      font-size: 24px;
+      font-size: 18px;
+      text-transform: uppercase;
       line-height: 30px;
       line-height: 62px;
       height: 62px;
       font-weight: 700;
+
+      &:hover,
+      &:focus {
+        color: @red;
+      }
+      &:active{
+        color: @red;
+        opacity:.3;
+      }
     }
     li:first-child {
       box-shadow: 0px -1px 0px #000;
@@ -114,6 +125,7 @@
     }
     &__toggle {
       margin-top:27px;
+      top: 0;
     }
   }
 
@@ -142,6 +154,7 @@
           line-height: 35px;
           font-weight: 400;
           padding: 12px 0 10px;
+          text-transform: none;
           // border-style: solid;
           // border-width: 0 0 2px 0;
           // border-color: transparent;
@@ -150,7 +163,6 @@
           &:after {
             content: '';
             display: block;
-            margin-top: 10px;
             width: 0%;
             height: 2px;
             background-color: #fff;
@@ -159,6 +171,7 @@
           &:hover,
           &.active,
           &:focus {
+            color: #fff;
             // border-fit: clip;
             // border-color: #fff;
             &:after {
